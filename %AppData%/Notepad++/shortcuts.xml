@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotepadPlus>
+    <!--
+    You can organize you Macro menu & Run menu by adding the attribute 'FolderName="My sub-menu name"' to any Macro or Command node.
+    This will place the corresponding node within a "My sub-menu name" sub-menu in the appropriate menu. Please consider the following examples:
+    -->
+    <InternalCommands />
+    <Macros>
+        <Macro name="Trim Trailing Space and Save" Ctrl="no" Alt="yes" Shift="yes" Key="83">
+            <Action type="2" message="0" wParam="42024" lParam="0" sParam="" />
+            <Action type="2" message="0" wParam="41006" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="시간" Ctrl="no" Alt="yes" Shift="no" Key="81">
+            <Action type="2" message="0" wParam="42086" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="백업 시간" Ctrl="no" Alt="no" Shift="no" Key="0">
+            <Action type="2" message="0" wParam="42086" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="B" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="a" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="c" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="k" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="u" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="p" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="-" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="(" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="." />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="." />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2306" wParam="0" lParam="0" sParam="" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=")" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2305" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2304" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2307" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2178" wParam="0" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="파라미터 정렬" Ctrl="yes" Alt="no" Shift="yes" Key="79">
+            <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
+            <Action type="3" message="1601" wParam="0" lParam="0" sParam=",
+     " />
+            <Action type="3" message="1625" wParam="0" lParam="1" sParam="" />
+            <Action type="3" message="1602" wParam="0" lParam="0" sParam=", " />
+            <Action type="3" message="1702" wParam="0" lParam="256" sParam="" />
+            <Action type="3" message="1701" wParam="0" lParam="1609" sParam="" />
+        </Macro>
+        <Macro name="1번 형식 지정" Ctrl="no" Alt="yes" Shift="no" Key="97">
+            <Action type="2" message="0" wParam="43023" lParam="0" sParam="" />
+            <Action type="2" message="0" wParam="43022" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="2번 형식 지정" Ctrl="no" Alt="yes" Shift="no" Key="98">
+            <Action type="2" message="0" wParam="43025" lParam="0" sParam="" />
+            <Action type="2" message="0" wParam="43024" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="3번 형식 지정" Ctrl="no" Alt="yes" Shift="no" Key="99">
+            <Action type="2" message="0" wParam="43027" lParam="0" sParam="" />
+            <Action type="2" message="0" wParam="43026" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="4번 형식 지정" Ctrl="no" Alt="yes" Shift="no" Key="100">
+            <Action type="2" message="0" wParam="43029" lParam="0" sParam="" />
+            <Action type="2" message="0" wParam="43028" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="5번 형식 지정" Ctrl="no" Alt="yes" Shift="no" Key="101">
+            <Action type="2" message="0" wParam="43031" lParam="0" sParam="" />
+            <Action type="2" message="0" wParam="43030" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="모든 형식 해제" Ctrl="no" Alt="yes" Shift="no" Key="96">
+            <Action type="2" message="0" wParam="43032" lParam="0" sParam="" />
+        </Macro>
+    </Macros>
+    <UserDefinedCommands>
+        <Command name="Get PHP help" Ctrl="no" Alt="yes" Shift="no" Key="112">https://www.php.net/$(CURRENT_WORD)</Command>
+        <Command name="Wikipedia Search" Ctrl="no" Alt="yes" Shift="no" Key="114">https://en.wikipedia.org/wiki/Special:Search?search=$(CURRENT_WORD)</Command>
+        <Command name="Open selected file path in new instance" Ctrl="no" Alt="yes" Shift="no" Key="117">$(NPP_FULL_FILE_PATH) $(CURRENT_WORD) -nosession -multiInst</Command>
+        <Command name="코드 실행" Ctrl="no" Alt="yes" Shift="no" Key="116">C:\Users\곽도윤\Documents\PROGRAMMING\Programming\nodeJs\MergeManager\Split_Gpl_Modules.js</Command>
+        <Command name="코드 실행" Ctrl="yes" Alt="no" Shift="no" Key="116">C:\Users\곽도윤\Documents\PROGRAMMING\Programming\nodeJs\MergeManager\Split_Gpl_Modules.js</Command>
+    </UserDefinedCommands>
+    <PluginCommands />
+    <ScintillaKeys />
+</NotepadPlus>
