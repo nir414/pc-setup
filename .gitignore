@@ -1,0 +1,19 @@
+# History files
+.history/
+*.history
+
+# VS Code settings (optional - uncomment if you don't want to share VS Code settings)
+# .vscode/
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Log files
+*.log
