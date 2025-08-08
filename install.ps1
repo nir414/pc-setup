@@ -19,3 +19,6 @@ winget install --id=GitHub.GitHubDesktop --accept-package-agreements --accept-so
 winget install --id=Microsoft.VisualStudioCode --accept-package-agreements --accept-source-agreements
 winget install --id=Notepad++.Notepad++ --accept-package-agreements --accept-source-agreements
 winget install --id=WinMerge.WinMerge --accept-package-agreements --accept-source-agreements
+
+winget install --id=OBSProject.OBSStudio
+winget install --id=BlackmagicDesign.DaVinciResolve
