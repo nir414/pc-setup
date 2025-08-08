@@ -21,4 +21,4 @@ winget install --id=Notepad++.Notepad++ --accept-package-agreements --accept-sou
 winget install --id=WinMerge.WinMerge --accept-package-agreements --accept-source-agreements
 
 winget install --id=OBSProject.OBSStudio
-winget install --id=BlackmagicDesign.DaVinciResolve
+winget install --id=Bandisoft.Bandizip --accept-package-agreements --accept-source-agreements
