@@ -13,6 +13,7 @@ winget install --id=TGRMNSoftware.BulkRenameUtility --accept-package-agreements 
 
 winget install --id=Bandisoft.Bandizip --accept-package-agreements --accept-source-agreements
 winget install --id=Kakao.KakaoTalk --accept-package-agreements --accept-source-agreements
+winget install --id=NAVER.MYBOX --accept-package-agreements --accept-source-agreements
 winget install --id=Discord.Discord --accept-package-agreements --accept-source-agreements
 winget install --id=Valve.Steam --accept-package-agreements --accept-source-agreements
 
