@@ -117,6 +117,8 @@
 
 Windows 패키지 매니저 winget으로 앱을 검색하고 설치/업데이트/제거할 수 있습니다. 아래 예시는 PowerShell 기준입니다.
 
+주의: PowerShell은 멀티라인 명령에서 줄 끝에 백틱(`)을 사용합니다. Bash/zsh는 역슬래시(\)를 사용합니다.
+
 ### 1) 기본 준비
 
 ```powershell
@@ -139,15 +141,15 @@ winget show --id NAVER.MYBOX --versions  # 사용 가능한 버전 목록
 winget install --id NAVER.MYBOX --accept-package-agreements --accept-source-agreements
 
 # 특정 버전으로 설치 (카탈로그에 버전이 있을 때)
-winget install --id Microsoft.VisualStudioCode --version 1.92.0 \
+winget install --id Microsoft.VisualStudioCode --version 1.92.0 `
   --accept-package-agreements --accept-source-agreements
 
 # 채널이 있는 패키지라면 (예: Insiders/Canary/Preview 등)
-winget install --id Microsoft.VisualStudioCode --channel insiders \
+winget install --id Microsoft.VisualStudioCode --channel insiders `
   --accept-package-agreements --accept-source-agreements
 
 # 사용자 스코프(현재 사용자만) 설치가 필요할 때
-winget install --id Git.Git --scope user \
+winget install --id Git.Git --scope user `
   --accept-package-agreements --accept-source-agreements
 ```
 
@@ -155,9 +157,9 @@ winget install --id Git.Git --scope user \
 
 ```powershell
 winget upgrade                          # 업데이트 가능한 앱 목록
-winget upgrade --all \
+winget upgrade --all `
   --accept-package-agreements --accept-source-agreements
-winget upgrade --id Microsoft.PowerToys \
+winget upgrade --id Microsoft.PowerToys `
   --accept-package-agreements --accept-source-agreements
 ```
 
@@ -175,7 +177,7 @@ winget uninstall --id NAVER.MYBOX
 winget export --output .\apps.json --include-versions
 
 # 다른 PC에서 같은 환경으로 설치
-winget import --import-file .\apps.json \
+winget import --import-file .\apps.json `
   --accept-package-agreements --accept-source-agreements
 ```
 
