@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" fifProjectPanel1="no" fifProjectPanel2="no" fifProjectPanel3="no" fifFilterFollowsDoc="no" searchMode="1" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no" regexBackward4PowerUser="no" bookmarkLine="no" purge="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="no" fifRecuisive="yes" fifInHiddenFolder="no" fifProjectPanel1="no" fifProjectPanel2="no" fifProjectPanel3="no" fifFilterFollowsDoc="no" searchMode="1" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no" regexBackward4PowerUser="no" bookmarkLine="no" purge="no">
         <Path name="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC5C5;&#xBB34; &#xAE30;&#xB85D;" />
         <Path name="C:\Users\&#xACFD;&#xB3C4;&#xC724;\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC5C5;&#xBB34; &#xAE30;&#xB85D;" />
         <Path name="C:\Users\&#xACFD;&#xB3C4;&#xC724;\Documents\PROGRAMMING\Programming\HighseraExDevEq\C\HYCERA_C Module &#xAC1C;&#xBC1C;\projects\HYCERA_C" />
         <Path name="C:\Users\&#xACFD;&#xB3C4;&#xC724;\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC5C5;&#xBB34; &#xAE30;&#xB85D;\2025" />
         <Filter name="*.*" />
-        <Find name="12606" />
-        <Find name=",&#x000A;     " />
-        <Find name="10300" />
-        <Find name="S250494" />
-        <Find name="16051" />
-        <Find name="SUN" />
-        <Find name="S250503 NEXUSONE" />
-        <Find name="503" />
-        <Find name="0460" />
-        <Find name="S250503" />
-        <Replace name=", " />
-        <Replace name="\n" />
-        <Replace name="On/Off Speed" />
-        <Replace name="Up/Down" />
-        <Replace name="  " />
-        <Replace name="Vacuum" />
-        <Replace name="NEXUSONE" />
-        <Replace name="S250152" />
-        <Replace name="value" />
-        <Replace name="DI_RVS" />
+        <Find name="&#x000D;&#x000A; " />
+        <Find name=", " />
+        <Find name="2700" />
+        <Find name="&#x0009; " />
+        <Find name="[" />
+        <Find name="]" />
+        <Find name="GRDY|7" />
+        <Find name="GRDY|6" />
+        <Find name="GRDY|5" />
+        <Find name="GRDY|1" />
+        <Replace name=": " />
+        <Replace name=":\n" />
+        <Replace name="\t" />
+        <Replace name="GRDY|8" />
+        <Replace name="GRDY|7" />
+        <Replace name="GRDY|6" />
+        <Replace name="GRDY|5" />
+        <Replace name="GRDY|3" />
+        <Replace name="GRDY|2" />
+        <Replace name="|5" />
     </FindHistory>
-    <FileBrowser latestSelectedItem="C:\Users\Doyun\Desktop\WCP 1.1.65a_LONGSCARA">
-        <root foldername="C:\Users\Doyun\Desktop\WCP 1.1.65a_LONGSCARA" />
+    <FileBrowser latestSelectedItem="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xD504;&#xB85C;&#xADF8;&#xB7A8;\SubnetSyncer\SSbackup\backup-250911(163243) 0699 WISFAC\config\robot01.pac">
+        <root foldername="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xD504;&#xB85C;&#xADF8;&#xB7A8;\SubnetSyncer\SSbackup\backup-250911(163243) 0699 WISFAC\config" />
     </FileBrowser>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\Doyun\Desktop\KCTECH PID &#xD30C;&#xB77C;&#xBBF8;&#xD130; &#xD328;&#xCE58; &#xD30C;&#xC77C;\A6\VENTUS\WET 1\config\robot01.pac" />
-        <File filename="C:\Users\Doyun\AppData\Local\Temp\ba02caf7-d61d-4cfe-ae1f-80492fe0b0eb_S211038 KCTECH  - NTH #32.zip.0eb\S211038 KCTECH  - NTH #32\INDEX\Backup-2022-02-15 (11.49.03)\config\robot01.pac" />
-        <File filename="\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\2025&#xB144;\S250456 CTS\Overhang WTR\backup-250725(110808) 0456 CTS OVERHANG\systemInfo.txt" />
-        <File filename="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC5C5;&#xBB34; &#xAE30;&#xB85D;\2025\&#xC5C5;&#xBB34; &#xBA54;&#xBAA8; 2025-07-28.txt" />
-        <File filename="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC5C5;&#xBB34; &#xAE30;&#xB85D;\.history\2025\&#xC5C5;&#xBB34; &#xBA54;&#xBAA8; 2025-07-28_20250731155351.txt" />
-        <File filename="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC5C5;&#xBB34; &#xAE30;&#xB85D;\2025\&#xC5C5;&#xBB34; &#xBA54;&#xBAA8; 2025-07-14.txt" />
-        <File filename="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC5C5;&#xBB34; &#xAE30;&#xB85D;\2025\&#xC5C5;&#xBB34; &#xBA54;&#xBAA8; 2025-07-23.txt" />
-        <File filename="\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\2025&#xB144;\S250297 COMIZOA [D_WTR][S_Flip][Vacuum][Track]\backup-250612(134230) 0297 COMIZOA D_WTR(S_Flip)\projects\MergeCode\__init__RobotConfig__.gpl" />
-        <File filename="\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\2024&#xB144;\S240177 ATI - S-FLIP(Mask handling Robot)\Backup-2024-04-22 (16.13.51)\systemInfo.txt" />
-        <File filename="\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\2025&#xB144;\S250342 KCTECH - K3000 OZ #20 WTR2\S250342 KCTECH K3000 #OZ #20 WTR\BackUp\config\robot01.pac" />
+        <File filename="X:\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\2023&#xB144;\S230228 &#xC774;&#xB178;&#xB9E5;&#xC2A4; - 7-Axis WTR\Backup-2023-11-22 (11.55.03)\config\robot01.pac" />
+        <File filename="C:\Users\Doyun\AppData\Local\Temp\fz3temp-2\system.dat" />
+        <File filename="X:\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\LOG\Inspec\backupFile\NEXTIN\2P EFEM\SCARA (MIX)\DataSet.txt" />
+        <File filename="X:\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\2025&#xB144;\S250964 NEXTIN SCARA EFEM #20 2P RF\backup-250917(155037)&#xB125;&#xC2A4;&#xD2F4; U&#xD3EC;&#xC778;&#xD2B8; &#xCD94;&#xAC00;\projects\MergeCode\__init__RobotConfig__.gpl" />
+        <File filename="C:\Users\Doyun\Downloads\&#xBAA8;&#xD130; F&#xCD95; &#xC9C4;&#xB3D9; &#xCD5C;&#xC885;&#xC815;&#xB9AC;.txt" />
+        <File filename="C:\Users\Doyun\Downloads\AXIS5_FF_reestimate_from_pdl.txt" />
+        <File filename="C:\Users\Doyun\Downloads\&#xC7AC;&#xC6B0;&#xAC00; &#xCC0D;&#xC5C8;&#xB358; &#xD30C;&#xB77C;&#xBBF8;&#xD130;.txt" />
+        <File filename="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xD504;&#xB85C;&#xADF8;&#xB7A8;\SubnetSyncer\SSbackup\backup-251107(123017)\config\robot01.pac" />
+        <File filename="C:\Users\Doyun\Desktop\S250893 KCTECH K3000 O3 #12 WTR &#xD38C;&#xC6E8;&#xC5B4; &#xC14B;&#xC5C5;\WTR1\systemInfo.txt" />
+        <File filename="C:\Users\Doyun\Documents\&#xCE74;&#xCE74;&#xC624;&#xD1A1; &#xBC1B;&#xC740; &#xD30C;&#xC77C;\__init__IOConfig__ (9).gpl" />
     </History>
     <ProjectPanels>
         <ProjectPanel id="0" workSpaceFile="" />
@@ -49,7 +49,7 @@
     </ProjectPanels>
     <ColumnEditor choice="number">
         <text content="" />
-        <number initial="9" increase="1" repeat="-1" formatChoice="dec" leadingChoice="zeros" />
+        <number initial="5" increase="1" repeat="-1" formatChoice="dec" leadingChoice="zeros" />
     </ColumnEditor>
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes" fluentColor="8" fluentCustomColor="9152256" fluentMono="no">small</GUIConfig>
@@ -58,10 +58,10 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="no" size="2" backspaceUnindent="no" />
-        <GUIConfig name="AppPosition" x="0" y="0" width="1132" height="767" isMaximized="no" />
-        <GUIConfig name="FindWindowPosition" left="1176" top="557" right="1915" bottom="1001" isLessModeOn="no" />
+        <GUIConfig name="AppPosition" x="52" y="354" width="730" height="502" isMaximized="no" />
+        <GUIConfig name="FindWindowPosition" left="590" top="288" right="1329" bottom="732" isLessModeOn="no" />
         <GUIConfig name="FinderConfig" wrappedLines="no" purgeBeforeEverySearch="no" showOnlyOneEntryPerFoundLine="yes" />
-        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20250809" autoUpdateMode="1">no</GUIConfig>
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20251008" autoUpdateMode="0">yes</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
         <GUIConfig name="CheckHistoryFiles">no</GUIConfig>
         <GUIConfig name="TrayIcon">0</GUIConfig>
@@ -94,7 +94,7 @@
         <GUIConfig name="largeFileRestriction" fileSizeMB="200" isEnabled="yes" allowAutoCompletion="no" allowBraceMatch="no" allowSmartHilite="no" allowClickableLink="no" deactivateWordWrap="yes" suppress2GBWarning="no" />
         <GUIConfig name="multiInst" setting="2" clipboardHistory="no" documentList="no" characterPanel="no" folderAsWorkspace="no" projectPanels="no" documentMap="no" fuctionList="no" pluginPanels="no" />
         <GUIConfig name="MISC" fileSwitcherWithoutExtColumn="no" fileSwitcherExtWidth="50" fileSwitcherWithoutPathColumn="yes" fileSwitcherPathWidth="50" fileSwitcherNoGroups="no" backSlashIsEscapeCharacterForSql="yes" writeTechnologyEngine="1" isFolderDroppedOpenFiles="no" docPeekOnTab="no" docPeekOnMap="no" sortFunctionList="no" saveDlgExtFilterToAllTypes="no" muteSounds="no" enableFoldCmdToggable="no" hideMenuRightShortcuts="no" />
-        <GUIConfig name="Searching" monospacedFontFindDlg="no" fillFindFieldWithSelected="yes" fillFindFieldSelectCaret="yes" findDlgAlwaysVisible="no" confirmReplaceInAllOpenDocs="yes" replaceStopsWithoutFindingNext="no" inSelectionAutocheckThreshold="1024" fillDirFieldFromActiveDoc="no" />
+        <GUIConfig name="Searching" monospacedFontFindDlg="no" fillFindFieldWithSelected="yes" fillFindFieldSelectCaret="yes" findDlgAlwaysVisible="no" confirmReplaceInAllOpenDocs="yes" replaceStopsWithoutFindingNext="no" inSelectionAutocheckThreshold="1024" fillFindWhatThreshold="1024" fillDirFieldFromActiveDoc="no" />
         <GUIConfig name="searchEngine" searchEngineChoice="2" searchEngineCustom="" />
         <GUIConfig name="MarkAll" matchCase="no" wholeWordOnly="yes" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
@@ -102,10 +102,10 @@
         <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" lineNumberDynamicWidth="yes" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="circle" isChangeHistoryEnabled="1" lineWrapMethod="aligned" currentLineIndicator="1" currentLineFrameWidth="1" virtualSpace="no" scrollBeyondLastLine="yes" rightClickKeepsSelection="no" selectedTextForegroundSingleColor="yes" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="2" zoom2="0" whiteSpaceShow="show" eolShow="hide" eolMode="1" npcShow="show" npcMode="1" npcCustomColor="no" npcIncludeCcUniEOL="no" npcNoInputC0="yes" ccShow="yes" borderWidth="2" smoothFont="no" paddingLeft="0" paddingRight="0" distractionFreeDivPart="4" lineCopyCutWithoutSelection="yes" multiSelection="yes" columnSel2MultiEdit="yes" />
         <GUIConfig name="DockingManager" leftWidth="120" rightWidth="495" topHeight="200" bottomHeight="200">
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44080" curr="0" prev="-1" isVisible="yes" />
-            <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="1" prev="-1" isVisible="yes" />
+            <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="1" prev="-1" isVisible="no" />
+            <PluginDlg pluginName="ComparePlus.dll" id="31" curr="0" prev="-1" isVisible="no" />
             <PluginDlg pluginName="NppMarkdownPanel" id="0" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="no" />
-            <PluginDlg pluginName="ComparePlus.dll" id="31" curr="0" prev="-1" isVisible="no" />
             <PluginDlg pluginName="MarkdownViewer++" id="0" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44084" curr="1" prev="-1" isVisible="no" />
             <ActiveTabs cont="0" activeTab="0" />

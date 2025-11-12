@@ -1,0 +1,8 @@
+Name,Case,Whole Word,Path,Diacritic,Regex,Sort,Descending,Filter,Search,Index,File List,Host,Link Type,Macro,Key,View
+"카카오톡 받은 파일",0,0,0,0,0,"Date Modified",1,"EVERYTHING","path:""C:\Users\Doyun\Documents\카카오톡 받은 파일"" depth:<=5 ",0,"","",1,,,0
+"SSbackup",0,0,0,0,0,"Date Modified",1,"EVERYTHING","folder: path:""C:\Users\Doyun\Documents\업무 관련\프로그램\SubnetSyncer\SSbackup\"" depth:<=8 ",0,"","",1,,,0
+"프로젝트 검색",0,0,0,0,0,"Date Modified",1,"EVERYTHING","folder: path:""\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-프로젝트 자료\"" !path:""\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-프로젝트 자료\LOG\"" depth:<=1 ",0,"","",1,"folder: path:""\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-프로젝트 자료\"" !path:""\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-프로젝트 자료\LOG\"" depth:<=2 ",,0
+"AutoChecker 백업 관리",0,0,0,0,0,"Date Modified",1,"EVERYTHING","folder: ""\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-프로젝트 자료\LOG\"" depth:<=4 ",0,"","",1,,,0
+"제작 사양",0,0,0,0,0,"Date Modified",1,"EVERYTHING","""\\Rnd2000-server\C0000_Project\CF000_프로젝트이력""  folder: ",0,"","",1,,,0
+"로봇 사양",0,0,0,0,0,"Date Modified",1,"FOLDER","""\\Rnd2000-server\C0000_Project\CF000_프로젝트이력"" ",0,"","",1,,,0
+"스캔본 품질",0,0,0,0,0,"Date Modified",1,"EVERYTHING","""\\192.168.0.25\A0000_Company\AE000_품질경영\품질시스템 폴더\08. 공정 관리 (함경철, 이무연, 박동환)\8-3 System ( 매뉴얼 관리 )\제어"" ",0,"","",1,,,0
