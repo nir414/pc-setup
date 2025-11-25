@@ -1,31 +1,35 @@
 # PC 설정 백업/동기화 구조
 # - 각 섹션(folders)은 포함할 상대 경로, excludes는 해당 경로 내에서 제외할 패턴입니다.
 [SyncData]
+	# %APPDATA% (Roaming) 영역
+	[SyncData.APPDATA]
+		# 동기화 대상 폴더
+		folders = [
+			"CopyQ/",
+			"Everything/",
+			"FileZilla/",
+			"lghub/",
+			"Notepad++/",
+			"PicPick/",
+			"WinMerge/"
+		]
+		# 제외 규칙
+		excludes = [
+			"Notepad++/backup/",
+			"WinMerge/Backup/",
+			"*/cache/",
+			"*.log"
+		]
 
-# --- APPDATA 영역 ---
-[SyncData.APPDATA]
-excludes = [
-  "Notepad++/backup/",
-  "WinMerge/Backup/",
-  "*/cache/",
-  "*.log"
-]
 
-folders = [
-  "CopyQ/",
-  "Everything/",
-  "FileZilla/",
-  "lghub/",
-  "Notepad++/",
-  "PicPick/",
-  "WinMerge/"
-]
+	# %LOCALAPPDATA% 영역
+	[SyncData.LOCALAPPDATA]
+		folders = []
+		excludes = []
 
-[SyncData.LOCALAPPDATA]
-folders = []
-
-[SyncData.USERPROFILE]
-folders = [
-  "Documents/PowerToys/"
-]
-
+	# %USERPROFILE% 영역
+	[SyncData.USERPROFILE]
+		folders = [
+			"Documents/PowerToys/"
+		]
+		excludes = []
