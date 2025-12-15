@@ -1,5 +1,0 @@
-Name,Type,Folder,Case,Whole Word,Path,Diacritic,Prefix,Suffix,Ignore Punctuation,Ignore Whitespace,Regex,Search,Filter,Columns,Sort,Descending,View,Index,File List,Host,Link Type,Macro,Key,Icon
-"프로젝트 자료",0,"",,,,,,,,,,"folder: path:""X:\BD000_Soft_Control"" !path:""\X:\BD000_Soft_Control\BD600-프로젝트 자료\LOG\"" depth:<=4 ",,"","",0,,,,,0,,,""
-"ssBackup",0,"",,,,,,,,,,"folder: path:""C:\Users\Doyun\Documents\업무 관련\프로그램\SubnetSyncer\SSbackup\"" depth:<=8 ",,"","",0,,,,,0,,,""
-"autoChecker",0,"",,,,,,,,,,"folder: ""X:\BD000_Soft_Control\BD600-프로젝트 자료\LOG\"" depth:<=7 ",,"","",0,,,,,0,,,""
-"제작사양",0,"",,,,,,,,,,"folder: ""\\Rnd2000-server\C0000_Project\CF000_프로젝트이력"" depth:<=2 ",,"","",0,,,,,0,,,""
