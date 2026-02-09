@@ -12,6 +12,7 @@ import (
 	"github.com/nir414/pc-setup/syncer/internal/config"
 	"github.com/nir414/pc-setup/syncer/internal/engine"
 	"github.com/nir414/pc-setup/syncer/internal/state"
+	"github.com/nir414/pc-setup/syncer/internal/version"
 )
 
 const (
@@ -36,11 +37,21 @@ func (a *App) Run(ctx context.Context, args []string) error {
 	}
 
 	if len(rest) == 0 {
-		return errors.New("no command provided; expected one of: backup, status")
+		return errors.New("no command provided; expected one of: backup, status, version")
 	}
 
 	command := rest[0]
 	commandArgs := rest[1:]
+
+	// Handle commands that don't require config loading
+	switch strings.ToLower(command) {
+	case "version", "-v", "--version":
+		fmt.Println(version.GetVersionString())
+		return nil
+	case "help", "-h", "--help":
+		io.WriteString(os.Stdout, helpText)
+		return nil
+	}
 
 	root, configPath, err := resolvePaths(opts)
 	if err != nil {
@@ -67,11 +78,8 @@ func (a *App) Run(ctx context.Context, args []string) error {
 		return a.runBackup(ctx, eng, commandArgs)
 	case "status":
 		return a.runStatus(ctx, eng, commandArgs, opts)
-	case "help", "-h", "--help":
-		io.WriteString(os.Stdout, helpText)
-		return nil
 	default:
-		return fmt.Errorf("unknown command %q; expected one of: backup, status", command)
+		return fmt.Errorf("unknown command %q; expected one of: backup, status, version", command)
 	}
 }
 
@@ -143,6 +151,7 @@ const helpText = `syncer - Windows 설정 백업 도우미
 명령:
   backup            시스템 파일을 SyncData로 백업
   status            백업이 필요한 파일 확인
+  version           버전 정보 출력
   help              이 도움말 출력
 
 설명:
