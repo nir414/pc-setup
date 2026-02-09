@@ -91,33 +91,35 @@ func parseGlobalOptions(args []string) (globalOptions, []string, error) {
 
 func printStatusReport(report *engine.StatusReport) {
 	if report == nil {
-		fmt.Println("(no status information)")
+		fmt.Println("(상태 정보 없음)")
 		return
 	}
 
-	fmt.Println("Status Summary:")
-	fmt.Printf("  Up-to-date    : %d\n", report.Summary.UpToDate)
-	fmt.Printf("  Needs backup  : %d\n", report.Summary.NeedsBackup)
-	fmt.Printf("  Needs sync    : %d\n", report.Summary.NeedsSync)
-	fmt.Printf("  Conflicts     : %d\n", report.Summary.Conflicts)
+	fmt.Println("상태 요약:")
+	fmt.Printf("  최신 상태        : %d개\n", report.Summary.UpToDate)
+	fmt.Printf("  백업 필요        : %d개\n", report.Summary.NeedsBackup)
+	fmt.Printf("  SyncData에만 존재: %d개\n", report.Summary.RepoOnly)
 
 	if len(report.Entries) == 0 {
-		fmt.Println("\nEverything is up-to-date.")
+		fmt.Println("\n모든 파일이 최신 상태입니다.")
 		return
 	}
 
-	fmt.Println("\nDetails:")
+	fmt.Println("\n상세 내역:")
 	for _, entry := range report.Entries {
-		fmt.Printf("  [%s] %s\n", entry.Status, entry.Path)
-		if entry.System != nil && entry.Repo != nil && entry.System.Hash != entry.Repo.Hash {
-			fmt.Printf("    system hash: %s\n", entry.System.Hash)
-			fmt.Printf("    repo   hash: %s\n", entry.Repo.Hash)
+		var statusText string
+		switch entry.Status {
+		case "system_added":
+			statusText = "새로 추가됨"
+		case "system_modified":
+			statusText = "수정됨"
+		case "system_deleted":
+			statusText = "삭제됨"
+		case "repo_only":
+			statusText = "SyncData에만 존재"
+		default:
+			statusText = string(entry.Status)
 		}
-		if entry.System != nil && entry.Repo == nil {
-			fmt.Printf("    system hash: %s\n", entry.System.Hash)
-		}
-		if entry.System == nil && entry.Repo != nil {
-			fmt.Printf("    repo   hash: %s\n", entry.Repo.Hash)
-		}
+		fmt.Printf("  [%s] %s\n", statusText, entry.Path)
 	}
 }

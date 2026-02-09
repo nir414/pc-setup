@@ -17,21 +17,23 @@ import (
 )
 
 // Options configures the sync engine.
+// Engine 설정 옵션
 type Options struct {
-	Root          string
-	Config        *config.Config
-	SnapshotStore state.Store
-	Logger        *log.Logger
+	Root          string         // 프로젝트 루트 경로
+	Config        *config.Config // 설정 파일 내용
+	SnapshotStore state.Store    // 스냅샷 저장소
+	Logger        *log.Logger    // 로거
 }
 
 // Engine orchestrates backup and synchronization operations.
+// 백업 작업을 조율하는 핵심 엔진
 type Engine struct {
-	root      string
-	cfg       *config.Config
-	store     state.Store
-	logger    *log.Logger
-	targets   []sectionSpec
-	pathIndex map[string]pathPair
+	root      string              // 프로젝트 루트 경로
+	cfg       *config.Config      // 설정
+	store     state.Store         // 스냅샷 저장소
+	logger    *log.Logger         // 로거
+	targets   []sectionSpec       // 백업 대상 섹션들 (APPDATA, LOCALAPPDATA 등)
+	pathIndex map[string]pathPair // 경로 매핑 인덱스
 }
 
 // BackupResult captures statistics from a backup run.
@@ -40,14 +42,6 @@ type BackupResult struct {
 	SkippedFiles int
 	CopiedBytes  int64
 	RemovedFiles int
-}
-
-// SyncResult captures statistics from a sync run.
-type SyncResult struct {
-	UpdatedFiles int
-	UpdatedBytes int64
-	RemovedFiles int
-	SkippedFiles int
 }
 
 // StatusReport summarises the current difference between system and repository.
@@ -59,10 +53,9 @@ type StatusReport struct {
 
 // StatusSummary aggregates counts for diff categories.
 type StatusSummary struct {
-	UpToDate    int
-	NeedsBackup int
-	NeedsSync   int
-	Conflicts   int
+	UpToDate    int // 이미 최신 상태
+	NeedsBackup int // 백업 필요 (시스템에서 변경/추가/삭제됨)
+	RepoOnly    int // SyncData에만 존재 (시스템에 없음)
 }
 
 // DiffStatus categorises a difference between system and repository content.
@@ -70,14 +63,11 @@ type DiffStatus string
 
 // Diff status values.
 const (
-	DiffStatusUpToDate       DiffStatus = "up_to_date"
-	DiffStatusSystemAdded    DiffStatus = "system_added"
-	DiffStatusSystemModified DiffStatus = "system_modified"
-	DiffStatusSystemDeleted  DiffStatus = "system_deleted"
-	DiffStatusRepoAdded      DiffStatus = "repo_added"
-	DiffStatusRepoModified   DiffStatus = "repo_modified"
-	DiffStatusRepoDeleted    DiffStatus = "repo_deleted"
-	DiffStatusConflict       DiffStatus = "conflict"
+	DiffStatusUpToDate       DiffStatus = "up_to_date"      // 시스템과 SyncData가 동일
+	DiffStatusSystemAdded    DiffStatus = "system_added"    // 시스템에만 존재
+	DiffStatusSystemModified DiffStatus = "system_modified" // 시스템에서 변경됨
+	DiffStatusSystemDeleted  DiffStatus = "system_deleted"  // 시스템에서 삭제됨
+	DiffStatusRepoOnly       DiffStatus = "repo_only"       // SyncData에만 존재 (시스템에 없음)
 )
 
 // DiffEntry describes the state of a single logical file.
@@ -143,7 +133,10 @@ func (e *Engine) buildTargets() ([]sectionSpec, map[string]pathPair) {
 			continue
 		}
 
-		destBase := filepath.Join(e.root, "SyncData", descriptor.RepositoryDir)
+		// 템플릿 경로 (어떤 파일을 백업할지 정의)
+		templateBase := filepath.Join(e.root, "SyncData", descriptor.RepositoryDir)
+		// 실제 백업 저장 경로
+		destBase := filepath.Join(e.root, "SyncData", "backup", descriptor.RepositoryDir)
 		matcher := newMatcher(section.Excludes)
 
 		folders := make([]folderSpec, 0, len(section.Folders))
@@ -153,14 +146,16 @@ func (e *Engine) buildTargets() ([]sectionSpec, map[string]pathPair) {
 				continue
 			}
 			folderInfo := folderSpec{
-				ConfigPath: normalized,
-				SourcePath: filepath.Join(sourceBase, normalized),
-				DestPath:   filepath.Join(destBase, normalized),
+				ConfigPath:   normalized,
+				SourcePath:   filepath.Join(sourceBase, normalized),
+				TemplatePath: filepath.Join(templateBase, normalized),
+				DestPath:     filepath.Join(destBase, normalized),
 			}
 			folders = append(folders, folderSpec{
-				ConfigPath: normalized,
-				SourcePath: folderInfo.SourcePath,
-				DestPath:   folderInfo.DestPath,
+				ConfigPath:   normalized,
+				SourcePath:   folderInfo.SourcePath,
+				TemplatePath: folderInfo.TemplatePath,
+				DestPath:     folderInfo.DestPath,
 			})
 
 			prefix := makeKey(descriptor.RepositoryDir, normalized)
@@ -171,12 +166,13 @@ func (e *Engine) buildTargets() ([]sectionSpec, map[string]pathPair) {
 		}
 
 		spec := sectionSpec{
-			Name:       descriptor.RepositoryDir,
-			EnvVar:     descriptor.EnvVar,
-			SourceBase: sourceBase,
-			DestBase:   destBase,
-			Folders:    folders,
-			Matcher:    matcher,
+			Name:         descriptor.RepositoryDir,
+			EnvVar:       descriptor.EnvVar,
+			SourceBase:   sourceBase,
+			TemplateBase: templateBase,
+			DestBase:     destBase,
+			Folders:      folders,
+			Matcher:      matcher,
 		}
 
 		sections = append(sections, spec)
@@ -199,6 +195,7 @@ func (e *Engine) buildTargets() ([]sectionSpec, map[string]pathPair) {
 }
 
 // Backup synchronises files from the system into the repository.
+// 시스템에서 변경된 파일들을 SyncData로 백업합니다.
 func (e *Engine) Backup(ctx context.Context) (*BackupResult, error) {
 	_, diff, err := e.computeDiff(ctx)
 	if err != nil {
@@ -210,6 +207,7 @@ func (e *Engine) Backup(ctx context.Context) (*BackupResult, error) {
 	for _, entry := range diff.Entries {
 		switch entry.Status {
 		case DiffStatusSystemAdded, DiffStatusSystemModified:
+			// 시스템에 새로 추가되거나 수정된 파일 -> SyncData로 복사
 			if entry.SystemPath == "" || entry.RepoPath == "" {
 				continue
 			}
@@ -220,7 +218,9 @@ func (e *Engine) Backup(ctx context.Context) (*BackupResult, error) {
 			if entry.System != nil {
 				stats.CopiedBytes += entry.System.Size
 			}
+
 		case DiffStatusSystemDeleted:
+			// 시스템에서 삭제된 파일 -> SyncData에서도 삭제
 			if entry.RepoPath == "" {
 				continue
 			}
@@ -228,13 +228,17 @@ func (e *Engine) Backup(ctx context.Context) (*BackupResult, error) {
 				return nil, fmt.Errorf("remove %s: %w", entry.Path, err)
 			}
 			stats.RemovedFiles++
-		case DiffStatusConflict:
+
+		case DiffStatusRepoOnly:
+			// SyncData에만 있는 파일 - 건너뜀 (시스템에 없으므로 백업 불필요)
 			stats.SkippedFiles++
+
 		default:
-			// changes owned by repo, skip during backup
+			// DiffStatusUpToDate - 이미 최신 상태
 		}
 	}
 
+	// 현재 시스템 상태를 스냅샷으로 저장
 	freshSnapshot, err := e.collectSystemSnapshot(ctx)
 	if err != nil {
 		return nil, err
@@ -248,6 +252,7 @@ func (e *Engine) Backup(ctx context.Context) (*BackupResult, error) {
 }
 
 // Status computes a status report describing pending changes.
+// 백업이 필요한 변경사항을 보고합니다.
 func (e *Engine) Status(ctx context.Context) (*StatusReport, error) {
 	_, diff, err := e.computeDiff(ctx)
 	if err != nil {
@@ -265,14 +270,12 @@ func (e *Engine) Status(ctx context.Context) (*StatusReport, error) {
 			report.Summary.UpToDate++
 		case DiffStatusSystemAdded, DiffStatusSystemModified, DiffStatusSystemDeleted:
 			report.Summary.NeedsBackup++
-		case DiffStatusRepoAdded, DiffStatusRepoModified, DiffStatusRepoDeleted:
-			report.Summary.NeedsSync++
-		case DiffStatusConflict:
-			report.Summary.Conflicts++
+		case DiffStatusRepoOnly:
+			report.Summary.RepoOnly++
 		}
 	}
 
-	// remove entries marked up-to-date from listing to keep output concise
+	// up-to-date 항목은 출력에서 제외 (간결성을 위해)
 	pruned := report.Entries[:0]
 	for _, entry := range report.Entries {
 		if entry.Status == DiffStatusUpToDate {
@@ -283,52 +286,6 @@ func (e *Engine) Status(ctx context.Context) (*StatusReport, error) {
 	report.Entries = pruned
 
 	return report, nil
-}
-
-// Sync applies repository changes to the system.
-func (e *Engine) Sync(ctx context.Context) (*SyncResult, error) {
-	_, diff, err := e.computeDiff(ctx)
-	if err != nil {
-		return nil, err
-	}
-	stats := &SyncResult{}
-
-	for _, entry := range diff.Entries {
-		switch entry.Status {
-		case DiffStatusRepoAdded, DiffStatusRepoModified:
-			if entry.SystemPath == "" || entry.RepoPath == "" {
-				continue
-			}
-			if err := e.copyFile(entry.RepoPath, entry.SystemPath); err != nil {
-				return nil, fmt.Errorf("sync copy %s: %w", entry.Path, err)
-			}
-			stats.UpdatedFiles++
-			if entry.Repo != nil {
-				stats.UpdatedBytes += entry.Repo.Size
-			}
-		case DiffStatusRepoDeleted:
-			if entry.SystemPath == "" {
-				continue
-			}
-			if err := os.Remove(entry.SystemPath); err != nil && !errors.Is(err, os.ErrNotExist) {
-				return nil, fmt.Errorf("sync remove %s: %w", entry.Path, err)
-			}
-			stats.RemovedFiles++
-		case DiffStatusConflict, DiffStatusSystemAdded, DiffStatusSystemModified, DiffStatusSystemDeleted:
-			stats.SkippedFiles++
-		}
-	}
-
-	freshSnapshot, err := e.collectSystemSnapshot(ctx)
-	if err != nil {
-		return nil, err
-	}
-
-	if err := e.store.Save(ctx, freshSnapshot); err != nil {
-		return nil, fmt.Errorf("save snapshot: %w", err)
-	}
-
-	return stats, nil
 }
 
 func (e *Engine) computeDiff(ctx context.Context) (*state.Snapshot, *diffResult, error) {
@@ -342,23 +299,29 @@ func (e *Engine) computeDiff(ctx context.Context) (*state.Snapshot, *diffResult,
 		return nil, nil, fmt.Errorf("collect system files: %w", err)
 	}
 
-	repoFiles, err := e.collectRepoFiles(ctx)
+	// SyncData 템플릿에서 백업할 파일 목록 수집
+	templateFiles, err := e.collectTemplateFiles(ctx)
 	if err != nil {
-		return nil, nil, fmt.Errorf("collect repo files: %w", err)
+		return nil, nil, fmt.Errorf("collect template files: %w", err)
 	}
 
-	diff := buildDiff(systemFiles, repoFiles, snapshot)
+	// 시스템 파일과 템플릿 파일 비교
+	diff := buildDiff(systemFiles, templateFiles, snapshot)
 	for i := range diff.Entries {
-		sysPath, repoPath, ok := e.resolvePaths(diff.Entries[i].Path)
+		sysPath, backupPath, ok := e.resolvePaths(diff.Entries[i].Path)
 		if diff.Entries[i].System != nil {
 			diff.Entries[i].SystemPath = diff.Entries[i].System.AbsPath
 		} else if ok {
 			diff.Entries[i].SystemPath = sysPath
 		}
+		// RepoPath는 실제 백업 저장 경로(SyncData/backup)를 가리킴
 		if diff.Entries[i].Repo != nil {
-			diff.Entries[i].RepoPath = diff.Entries[i].Repo.AbsPath
+			// 템플릿 경로를 백업 경로로 변환
+			diff.Entries[i].RepoPath = strings.Replace(diff.Entries[i].Repo.AbsPath,
+				filepath.Join(e.root, "SyncData")+string(filepath.Separator),
+				filepath.Join(e.root, "SyncData", "backup")+string(filepath.Separator), 1)
 		} else if ok {
-			diff.Entries[i].RepoPath = repoPath
+			diff.Entries[i].RepoPath = backupPath
 		}
 	}
 	return snapshot, diff, nil

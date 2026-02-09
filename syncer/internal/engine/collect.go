@@ -1,3 +1,5 @@
+// collect.go - 파일 수집 모듈
+// 시스템 및 SyncData에서 파일 정보를 수집하고 해시를 계산합니다.
 package engine
 
 import (
@@ -16,6 +18,7 @@ import (
 
 type fileMap map[string]*FileInfo
 
+// collectSystemFiles: 시스템 (%APPDATA%, %LOCALAPPDATA% 등)에서 파일 정보 수집
 func (e *Engine) collectSystemFiles(ctx context.Context) (fileMap, error) {
 	result := make(fileMap)
 	for _, section := range e.targets {
@@ -28,11 +31,12 @@ func (e *Engine) collectSystemFiles(ctx context.Context) (fileMap, error) {
 	return result, nil
 }
 
-func (e *Engine) collectRepoFiles(ctx context.Context) (fileMap, error) {
+// collectTemplateFiles: SyncData 폴더(템플릿)에서 백업할 파일 목록 수집
+func (e *Engine) collectTemplateFiles(ctx context.Context) (fileMap, error) {
 	result := make(fileMap)
 	for _, section := range e.targets {
 		for _, folder := range section.Folders {
-			if err := e.collectFolder(ctx, section, folder, folder.DestPath, result); err != nil {
+			if err := e.collectFolder(ctx, section, folder, folder.TemplatePath, result); err != nil {
 				return nil, err
 			}
 		}
@@ -108,6 +112,8 @@ func (e *Engine) collectFolder(ctx context.Context, section sectionSpec, folder 
 	})
 }
 
+// collectSystemSnapshot: 현재 시스템 파일 상태를 스냅샷으로 생성
+// 다음 백업 시 변경사항 추적에 사용됩니다.
 func (e *Engine) collectSystemSnapshot(ctx context.Context) (*state.Snapshot, error) {
 	files, err := e.collectSystemFiles(ctx)
 	if err != nil {
@@ -152,6 +158,7 @@ func makeKey(sectionName, sectionRelative string) string {
 	return sectionName + "/" + sectionRelative
 }
 
+// hashFile: 파일의 SHA256 해시값 계산 (파일 변경 감지용)
 func hashFile(path string) (string, error) {
 	f, err := os.Open(path)
 	if err != nil {

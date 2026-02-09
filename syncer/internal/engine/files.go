@@ -1,3 +1,5 @@
+// files.go - 파일 복사 유틸리티
+// 파일을 안전하게 복사하며, 임시 파일을 사용하여 원자적 쓰기를 보장합니다.
 package engine
 
 import (
@@ -8,6 +10,10 @@ import (
 	"time"
 )
 
+// copyFileContents: 파일을 src에서 dst로 안전하게 복사
+// 1. 임시 파일에 먼저 복사
+// 2. 권한과 수정 시간 복사
+// 3. 임시 파일을 최종 위치로 이동
 func copyFileContents(src, dst string) error {
 	srcFile, err := os.Open(src)
 	if err != nil {

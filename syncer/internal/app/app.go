@@ -4,6 +4,8 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"io"
+	"os"
 	"path/filepath"
 	"strings"
 
@@ -34,7 +36,7 @@ func (a *App) Run(ctx context.Context, args []string) error {
 	}
 
 	if len(rest) == 0 {
-		return errors.New("no command provided; expected one of: backup, status, sync")
+		return errors.New("no command provided; expected one of: backup, status")
 	}
 
 	command := rest[0]
@@ -65,13 +67,11 @@ func (a *App) Run(ctx context.Context, args []string) error {
 		return a.runBackup(ctx, eng, commandArgs)
 	case "status":
 		return a.runStatus(ctx, eng, commandArgs, opts)
-	case "sync":
-		return a.runSync(ctx, eng, commandArgs, opts)
 	case "help", "-h", "--help":
-		fmt.Print(helpText)
+		io.WriteString(os.Stdout, helpText)
 		return nil
 	default:
-		return fmt.Errorf("unknown command %q; expected one of: backup, status, sync", command)
+		return fmt.Errorf("unknown command %q; expected one of: backup, status", command)
 	}
 }
 
@@ -108,26 +108,6 @@ func (a *App) runStatus(ctx context.Context, eng *engine.Engine, args []string, 
 	return nil
 }
 
-func (a *App) runSync(ctx context.Context, eng *engine.Engine, args []string, opts globalOptions) error {
-	if len(args) != 0 {
-		return fmt.Errorf("sync command does not accept additional arguments: %v", args)
-	}
-
-	result, err := eng.Sync(ctx)
-	if err != nil {
-		return err
-	}
-
-	fmt.Printf("Sync completed: %d files updated, %d skipped, %d removals, %.2f MiB moved\n",
-		result.UpdatedFiles,
-		result.SkippedFiles,
-		result.RemovedFiles,
-		float64(result.UpdatedBytes)/1024/1024,
-	)
-
-	return nil
-}
-
 func resolvePaths(opts globalOptions) (string, string, error) {
 	cfgPath := opts.ConfigPath
 	if cfgPath == "" {
@@ -151,7 +131,7 @@ func resolvePaths(opts globalOptions) (string, string, error) {
 	return absRoot, absCfg, nil
 }
 
-const helpText = `syncer - Windows 설정 백업/동기화 도우미
+const helpText = `syncer - Windows 설정 백업 도우미
 
 사용법:
   syncer [전역 옵션] <command>
@@ -161,8 +141,12 @@ const helpText = `syncer - Windows 설정 백업/동기화 도우미
   --root <path>     SyncData가 위치한 프로젝트 루트 (기본: 설정 파일 위치)
 
 명령:
-  backup            시스템 -> 저장소로 백업 실행
-  status            현재 차이점 요약 출력
-  sync              저장소 -> 시스템 동기화 실행
+  backup            시스템 파일을 SyncData로 백업
+  status            백업이 필요한 파일 확인
   help              이 도움말 출력
+
+설명:
+  - backup: %APPDATA%, %LOCALAPPDATA%, %USERPROFILE%에서 
+            sync.toml에 정의된 파일들을 SyncData 폴더로 복사합니다.
+  - status: 시스템 파일과 SyncData를 비교하여 변경사항을 확인합니다.
 `
