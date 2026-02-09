@@ -1,6 +1,14 @@
 # How to Create the Release
 
-The syncer application has been built for multiple platforms. To create and upload the release:
+## Building the Binaries
+First, build the syncer application for all platforms:
+```bash
+bash build.sh
+```
+
+This will create binaries in the `releases/` directory.
+
+## Creating the Release
 
 ## Option 1: Using GitHub CLI (Recommended)
 If you have GitHub CLI installed:
