@@ -10,7 +10,7 @@ This will create binaries in the `releases/` directory.
 
 ## Creating the Release
 
-## Option 1: Using GitHub CLI (Recommended)
+### Option 1: Using GitHub CLI (Recommended)
 If you have GitHub CLI installed:
 ```bash
 bash create_release.sh
@@ -23,7 +23,7 @@ gh release create v0.1.0 ./releases/* \
   --notes-file RELEASE_NOTES.md
 ```
 
-## Option 2: Using GitHub Web Interface
+### Option 2: Using GitHub Web Interface
 1. Create a new tag `v0.1.0`:
    ```bash
    git tag -a v0.1.0 -m "Release v0.1.0 - Initial syncer release"
