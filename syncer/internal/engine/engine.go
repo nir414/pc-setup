@@ -54,8 +54,8 @@ type StatusReport struct {
 // StatusSummary aggregates counts for diff categories.
 type StatusSummary struct {
 	UpToDate    int // 이미 최신 상태
-	NeedsBackup int // 백업 필요 (시스템에서 변경/추가/삭제됨)
-	RepoOnly    int // SyncData에만 존재 (시스템에 없음)
+	NeedsBackup int // 백업 필요 (SyncData에 정의된 파일 중 변경/미백업/삭제됨)
+	Ignored     int // 무시됨 (시스템에만 있고 SyncData에 정의되지 않음)
 }
 
 // DiffStatus categorises a difference between system and repository content.
@@ -195,7 +195,7 @@ func (e *Engine) buildTargets() ([]sectionSpec, map[string]pathPair) {
 }
 
 // Backup synchronises files from the system into the repository.
-// 시스템에서 변경된 파일들을 SyncData로 백업합니다.
+// SyncData 템플릿에 정의된 파일만 시스템에서 찾아 백업합니다.
 func (e *Engine) Backup(ctx context.Context) (*BackupResult, error) {
 	_, diff, err := e.computeDiff(ctx)
 	if err != nil {
@@ -206,8 +206,8 @@ func (e *Engine) Backup(ctx context.Context) (*BackupResult, error) {
 
 	for _, entry := range diff.Entries {
 		switch entry.Status {
-		case DiffStatusSystemAdded, DiffStatusSystemModified:
-			// 시스템에 새로 추가되거나 수정된 파일 -> SyncData로 복사
+		case DiffStatusSystemModified:
+			// SyncData에 정의된 파일이 시스템에서 수정됨 -> 백업
 			if entry.SystemPath == "" || entry.RepoPath == "" {
 				continue
 			}
@@ -219,8 +219,32 @@ func (e *Engine) Backup(ctx context.Context) (*BackupResult, error) {
 				stats.CopiedBytes += entry.System.Size
 			}
 
+		case DiffStatusRepoOnly:
+			// SyncData에 정의된 파일 -> 시스템에서 찾아서 백업
+			if entry.SystemPath == "" || entry.RepoPath == "" {
+				stats.SkippedFiles++
+				continue
+			}
+			// 시스템에 파일이 존재하는지 확인
+			if _, err := os.Stat(entry.SystemPath); err != nil {
+				if os.IsNotExist(err) {
+					stats.SkippedFiles++
+					continue
+				}
+				return nil, fmt.Errorf("stat %s: %w", entry.Path, err)
+			}
+			// 백업 복사
+			if err := e.copyFile(entry.SystemPath, entry.RepoPath); err != nil {
+				return nil, fmt.Errorf("copy %s: %w", entry.Path, err)
+			}
+			stats.CopiedFiles++
+			// 파일 크기 계산
+			if info, err := os.Stat(entry.SystemPath); err == nil {
+				stats.CopiedBytes += info.Size()
+			}
+
 		case DiffStatusSystemDeleted:
-			// 시스템에서 삭제된 파일 -> SyncData에서도 삭제
+			// 시스템에서 삭제된 파일 -> backup에서도 삭제
 			if entry.RepoPath == "" {
 				continue
 			}
@@ -229,8 +253,8 @@ func (e *Engine) Backup(ctx context.Context) (*BackupResult, error) {
 			}
 			stats.RemovedFiles++
 
-		case DiffStatusRepoOnly:
-			// SyncData에만 있는 파일 - 건너뜀 (시스템에 없으므로 백업 불필요)
+		case DiffStatusSystemAdded:
+			// 시스템에만 있는 파일 (SyncData에 정의되지 않음) -> 무시
 			stats.SkippedFiles++
 
 		default:
@@ -268,17 +292,19 @@ func (e *Engine) Status(ctx context.Context) (*StatusReport, error) {
 		switch entry.Status {
 		case DiffStatusUpToDate:
 			report.Summary.UpToDate++
-		case DiffStatusSystemAdded, DiffStatusSystemModified, DiffStatusSystemDeleted:
+		case DiffStatusSystemModified, DiffStatusRepoOnly, DiffStatusSystemDeleted:
+			// SyncData에 정의된 파일이 백업 필요
 			report.Summary.NeedsBackup++
-		case DiffStatusRepoOnly:
-			report.Summary.RepoOnly++
+		case DiffStatusSystemAdded:
+			// 시스템에만 있는 파일 (무시)
+			report.Summary.Ignored++
 		}
 	}
 
-	// up-to-date 항목은 출력에서 제외 (간결성을 위해)
+	// up-to-date와 ignored 항목은 출력에서 제외
 	pruned := report.Entries[:0]
 	for _, entry := range report.Entries {
-		if entry.Status == DiffStatusUpToDate {
+		if entry.Status == DiffStatusUpToDate || entry.Status == DiffStatusSystemAdded {
 			continue
 		}
 		pruned = append(pruned, entry)
@@ -294,19 +320,55 @@ func (e *Engine) computeDiff(ctx context.Context) (*state.Snapshot, *diffResult,
 		return nil, nil, fmt.Errorf("load snapshot: %w", err)
 	}
 
-	systemFiles, err := e.collectSystemFiles(ctx)
-	if err != nil {
-		return nil, nil, fmt.Errorf("collect system files: %w", err)
-	}
-
-	// SyncData 템플릿에서 백업할 파일 목록 수집
+	// SyncData 템플릿에서 백업할 파일 목록만 수집
 	templateFiles, err := e.collectTemplateFiles(ctx)
 	if err != nil {
 		return nil, nil, fmt.Errorf("collect template files: %w", err)
 	}
 
-	// 시스템 파일과 템플릿 파일 비교
-	diff := buildDiff(systemFiles, templateFiles, snapshot)
+	// 템플릿에 정의된 파일의 시스템/백업 상태 수집
+	systemFiles := make(fileMap)
+	backupFiles := make(fileMap)
+
+	for key := range templateFiles {
+		systemPath, backupPath, ok := e.resolvePaths(key)
+		if !ok {
+			continue
+		}
+
+		// 시스템 파일 확인
+		if info, err := os.Stat(systemPath); err == nil && !info.IsDir() {
+			hash, err := hashFile(systemPath)
+			if err != nil {
+				return nil, nil, fmt.Errorf("hash %s: %w", systemPath, err)
+			}
+			systemFiles[key] = &FileInfo{
+				Path:    key,
+				AbsPath: systemPath,
+				Size:    info.Size(),
+				ModTime: info.ModTime().UTC(),
+				Hash:    hash,
+			}
+		}
+
+		// 백업 파일 확인 (SyncData/backup)
+		if info, err := os.Stat(backupPath); err == nil && !info.IsDir() {
+			hash, err := hashFile(backupPath)
+			if err != nil {
+				return nil, nil, fmt.Errorf("hash %s: %w", backupPath, err)
+			}
+			backupFiles[key] = &FileInfo{
+				Path:    key,
+				AbsPath: backupPath,
+				Size:    info.Size(),
+				ModTime: info.ModTime().UTC(),
+				Hash:    hash,
+			}
+		}
+	}
+
+	// 시스템 파일과 백업 파일 비교
+	diff := buildDiff(systemFiles, backupFiles, snapshot)
 	for i := range diff.Entries {
 		sysPath, backupPath, ok := e.resolvePaths(diff.Entries[i].Path)
 		if diff.Entries[i].System != nil {

@@ -96,9 +96,9 @@ func printStatusReport(report *engine.StatusReport) {
 	}
 
 	fmt.Println("상태 요약:")
-	fmt.Printf("  최신 상태        : %d개\n", report.Summary.UpToDate)
-	fmt.Printf("  백업 필요        : %d개\n", report.Summary.NeedsBackup)
-	fmt.Printf("  SyncData에만 존재: %d개\n", report.Summary.RepoOnly)
+	fmt.Printf("  최신 상태    : %d개\n", report.Summary.UpToDate)
+	fmt.Printf("  백업 필요    : %d개\n", report.Summary.NeedsBackup)
+	fmt.Printf("  무시됨        : %d개 (시스템에만 존재, SyncData에 미정의)\n", report.Summary.Ignored)
 
 	if len(report.Entries) == 0 {
 		fmt.Println("\n모든 파일이 최신 상태입니다.")
@@ -109,14 +109,12 @@ func printStatusReport(report *engine.StatusReport) {
 	for _, entry := range report.Entries {
 		var statusText string
 		switch entry.Status {
-		case "system_added":
-			statusText = "새로 추가됨"
 		case "system_modified":
 			statusText = "수정됨"
 		case "system_deleted":
 			statusText = "삭제됨"
 		case "repo_only":
-			statusText = "SyncData에만 존재"
+			statusText = "백업 필요 (SyncData에 정의됨)"
 		default:
 			statusText = string(entry.Status)
 		}

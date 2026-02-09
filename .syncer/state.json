@@ -1,0 +1,195 @@
+{
+  "generated_at": "2026-02-09T01:49:09.0983242Z",
+  "files": {
+    "APPDATA/CopyQ/copyq-commands.ini": {
+      "hash": "8f3e86855d3896c0ce01c4ac863f8e3e42671051674167b207373ee5f92eb944",
+      "size": 1247,
+      "mod_time": "2025-04-29T07:49:54.7595949Z"
+    },
+    "APPDATA/CopyQ/copyq.ini": {
+      "hash": "672af4202a5d1e137ed12a4fd61de3e6d2c36fcb5d0715c5215a2264cc0cd2c7",
+      "size": 6306,
+      "mod_time": "2025-11-20T00:51:21.7651314Z"
+    },
+    "APPDATA/CopyQ/copyq_geometry.ini": {
+      "hash": "fcd61b06a667c8166c2ed62d9c5495fa88aad5243dd5d81bdb497f72de066f0e",
+      "size": 2664,
+      "mod_time": "2026-02-06T09:23:55.4250792Z"
+    },
+    "APPDATA/CopyQ/copyq_tabs.ini": {
+      "hash": "cfeb26fd33141a00a3adf5aea735796588cf9a3453cd8ec4443f857827151ddc",
+      "size": 198,
+      "mod_time": "2026-02-06T09:23:55.6704537Z"
+    },
+    "APPDATA/Everything/Everything-1.5a.ini": {
+      "hash": "3ac84425c806feaa3d918b5d5f0de5af06e06c3618d4a74e31805189863f901c",
+      "size": 120974,
+      "mod_time": "2026-02-09T01:06:18.4916255Z"
+    },
+    "APPDATA/FileZilla/filezilla.xml": {
+      "hash": "2b117bdac94d50cd9ab8df0a64fc0f838e986ae63dfc265fc4b9e65d18b80805",
+      "size": 8961,
+      "mod_time": "2026-02-04T03:58:23.1436059Z"
+    },
+    "APPDATA/FileZilla/layout.xml": {
+      "hash": "100265e8f3b5b3c4d8aad0309caa36ee557cfc001efded72f14b97e644b0bd78",
+      "size": 313,
+      "mod_time": "2026-02-04T03:15:32.2216346Z"
+    },
+    "APPDATA/FileZilla/recentservers.xml": {
+      "hash": "fdc1c6c825b634991f112a1d51db67720677db46f4a3fc6297c6c285b427a527",
+      "size": 2626,
+      "mod_time": "2026-01-22T06:31:51.4966088Z"
+    },
+    "APPDATA/FileZilla/search.xml": {
+      "hash": "428580b9d9848e0c7451bb4812f778d262d4e4efdd62abb4b60f9fbd68c271f1",
+      "size": 370,
+      "mod_time": "2025-04-09T05:53:45.5360726Z"
+    },
+    "APPDATA/FileZilla/sitemanager.xml": {
+      "hash": "32cfdcbe1d64cd407a96e06433ddb9675217d38062c91cdca4b5d5fafb28cea6",
+      "size": 466,
+      "mod_time": "2024-08-30T02:39:10.9477997Z"
+    },
+    "APPDATA/FileZilla/trustedcerts.xml": {
+      "hash": "e887ac10dd1d48959007b83a83dc31a36d4f2fc65dbfd934f2ce7988867a491c",
+      "size": 840,
+      "mod_time": "2025-12-16T01:50:28.079636Z"
+    },
+    "APPDATA/Notepad++/config.xml": {
+      "hash": "0a75672e15ce37093c46f0cb0c5be9ce35b581c4fe5978893bb7542fe2b88a42",
+      "size": 12962,
+      "mod_time": "2026-02-06T08:28:34.2055901Z"
+    },
+    "APPDATA/Notepad++/plugins/config/CSV Lint.ini": {
+      "hash": "78a91f6bfcac0c54a0a7057705b33b22104004494b18d60a6ba4b05cea75efe8",
+      "size": 3780,
+      "mod_time": "2025-02-21T01:32:44.6135542Z"
+    },
+    "APPDATA/Notepad++/plugins/config/CSVLint.xml": {
+      "hash": "5c8c51a8c5ab77f38e72556bcc98302d3415411f1e1ebdbb61bdc40ee0625ae8",
+      "size": 6519,
+      "mod_time": "2025-02-21T01:31:16.6883725Z"
+    },
+    "APPDATA/Notepad++/plugins/config/ComparePlus.ini": {
+      "hash": "36cd39868142be65f9295c506e87dc7a48a88890cb19e519bb65ce5eaafebb6d",
+      "size": 2262,
+      "mod_time": "2025-03-04T09:09:36.9150391Z"
+    },
+    "APPDATA/Notepad++/plugins/config/DSpellCheck.ini": {
+      "hash": "2c763a1c8042c260b75b031a336920e6323332bb57d9b97eb46dee2456efbfcd",
+      "size": 202,
+      "mod_time": "2025-06-19T05:01:25.5353978Z"
+    },
+    "APPDATA/Notepad++/plugins/config/HexEditor.ini": {
+      "hash": "99c2f9c28a42da2d74807212931cf57ca7630d183381dcbe44a7457e366de70d",
+      "size": 930,
+      "mod_time": "2026-02-06T08:28:34.3695274Z"
+    },
+    "APPDATA/Notepad++/plugins/config/Hunspell/en_US.aff": {
+      "hash": "e746c882dd6f303c2c46e7452804b9201115a6942cfeb15f18f8edf774d2e24e",
+      "size": 3205,
+      "mod_time": "2025-02-21T00:25:31.8193813Z"
+    },
+    "APPDATA/Notepad++/plugins/config/Hunspell/en_US.dic": {
+      "hash": "f0b1a234bd178bdd01875b2a392a9647f888b8fe879f79c52aae62c2759b3647",
+      "size": 551762,
+      "mod_time": "2025-02-21T00:25:32.227436Z"
+    },
+    "APPDATA/Notepad++/plugins/config/Hunspell/ko_KR.aff": {
+      "hash": "43a984d8f1e2309490b69cfde31832d217a0b31164c67661e293efc096083688",
+      "size": 11094418,
+      "mod_time": "2025-02-21T00:25:33.1966463Z"
+    },
+    "APPDATA/Notepad++/plugins/config/Hunspell/ko_KR.dic": {
+      "hash": "14117a72811ed6a083ed374ceb728b0846a689da6f4dbfe0a84d3b3bce124e80",
+      "size": 2864524,
+      "mod_time": "2025-02-21T00:25:34.4491066Z"
+    },
+    "APPDATA/Notepad++/plugins/config/MarkdownViewerPlusPlus.ini": {
+      "hash": "fb3399d78b634799ae92cf767bfe99e8c95c9232e68c19849c871b4c82a2de13",
+      "size": 184,
+      "mod_time": "2025-06-18T02:16:31.7692423Z"
+    },
+    "APPDATA/Notepad++/plugins/config/NppMarkdownPanel.ini": {
+      "hash": "08294bc6d09bad0c21fed676915ac4dc4632995265548fae4e9cd9277fa2fdcd",
+      "size": 271,
+      "mod_time": "2026-02-06T08:28:34.1977273Z"
+    },
+    "APPDATA/Notepad++/plugins/config/PythonScript/scripts/startup.py": {
+      "hash": "e16dc9114e6478a7c798a45f94cc27ed6b07a382b0193c626cfd89bce8b2a0b9",
+      "size": 134,
+      "mod_time": "2025-05-16T02:18:43.5753284Z"
+    },
+    "APPDATA/Notepad++/plugins/config/PythonScriptStartup.cnf": {
+      "hash": "9ad1b9220b7732de0cd66638f4cdaf3f15d9a4c72bcea58a0d9cedc89a63ef94",
+      "size": 216,
+      "mod_time": "2025-05-16T02:21:09.2526608Z"
+    },
+    "APPDATA/Notepad++/plugins/config/QuickColorPicker.ini": {
+      "hash": "489e8262f16d243841324bf8648c956c6315fd97cc94cdd2a7d797ef1d7cc326",
+      "size": 484,
+      "mod_time": "2026-02-06T08:28:34.3977911Z"
+    },
+    "APPDATA/Notepad++/plugins/config/converter.ini": {
+      "hash": "5b0a08439e8e93817772f84e1098f14152d9da36c2601a0600ddaae6f61359d0",
+      "size": 646,
+      "mod_time": "2024-07-25T01:59:11.1861727Z"
+    },
+    "APPDATA/Notepad++/session.xml": {
+      "hash": "83b463ff737d48d0540d12f0d2861b771ed7490a9feebe0f373205954a484f86",
+      "size": 920,
+      "mod_time": "2026-02-06T08:28:34.213984Z"
+    },
+    "APPDATA/Notepad++/shortcuts.xml": {
+      "hash": "e8939453d3f862db3e1e77a2feea286fb6da31e90ffb9e9cc039063b24549a13",
+      "size": 12743,
+      "mod_time": "2025-10-23T00:48:34.8718209Z"
+    },
+    "APPDATA/Notepad++/stylers.xml": {
+      "hash": "4183f7933a0a0332d57fa07eec72c539a97ecfe56f2a5c176f9138ff9d3eedb5",
+      "size": 232364,
+      "mod_time": "2026-02-03T05:32:23.3507981Z"
+    },
+    "APPDATA/Notepad++/themes/DarkModeDefault.xml": {
+      "hash": "0a6c00c6f82663bf0508a1fafd6d44b39f93416d90cb9fcda8481abdc9e647bb",
+      "size": 235503,
+      "mod_time": "2026-02-03T05:32:25.29635Z"
+    },
+    "APPDATA/PicPick/picpick.ini": {
+      "hash": "27b108b678bb9808dac170052c5606f85785038a26c5dff1a944c45d5b17e00e",
+      "size": 4656,
+      "mod_time": "2026-02-06T09:26:00.2926687Z"
+    },
+    "APPDATA/WinMerge/WinMerge.ini": {
+      "hash": "16fa4ef3841c2b6ff4a0efd5fe0978daa7d37c863b32e6c1b4cfd29db07de7fd",
+      "size": 40486,
+      "mod_time": "2025-11-12T07:35:15.5205529Z"
+    },
+    "APPDATA/lghub/account.json": {
+      "hash": "4be64ee0d81adb348a275cd602259a750c2353d2b785ca2efb8f013824111a66",
+      "size": 1841,
+      "mod_time": "2025-08-09T08:17:46.7715538Z"
+    },
+    "APPDATA/lghub/frontend-store.json": {
+      "hash": "15f71895959b67b43aa541a09e4af09a5accb623ce5ac4cbf1f233860e61320e",
+      "size": 907,
+      "mod_time": "2025-08-09T08:17:46.7935894Z"
+    },
+    "APPDATA/lghub/window-state.json": {
+      "hash": "ac87758efb78bc07c315fbdf1ea0518b47e50b95b1cf325d4ed4ec1f63eaf1e3",
+      "size": 143,
+      "mod_time": "2025-08-09T08:17:46.8054262Z"
+    },
+    "USERPROFILE/Documents/PowerToys/Backup/settings_134048835394118966.ptb": {
+      "hash": "a5879145f212261db87ce23250f3f6ca39da13d553736c948e62b04163b18d44",
+      "size": 20821,
+      "mod_time": "2025-10-14T02:45:39.4724836Z"
+    },
+    "USERPROFILE/Documents/PowerToys/Backup/settings_134048835394118966.ptb.tags": {
+      "hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size": 2,
+      "mod_time": "2025-11-12T07:36:16.5226586Z"
+    }
+  }
+}

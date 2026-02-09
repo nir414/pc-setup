@@ -1,0 +1,32 @@
+{
+	"activeDeviceMenu-g305_ext1": "ASSIGNMENTS",
+	"deviceImage-3520230737": "http://127.0.0.1:9180/g305/front_black.png",
+	"deviceImage-2584601219": "http://127.0.0.1:9180/2a4dfe6b-ca40-436c-be4b-790cfe1fb807/front_black.webp",
+	"slideShowIndex-pro_x_60": 0,
+	"activeDeviceMenu-pro_x_60": "ASSIGNMENTS",
+	"FKC_FEATURE_OVERLAY-pro_x_60": 0,
+	"activeInputLayer-pro_x_60": 0,
+	"showLegends-pro_x_60": true,
+	"script-editor": {
+		"consoleHeight": 30
+	},
+	"deviceName-3520230737": "G304",
+	"deviceName-2584601219": "PRO X 60",
+	"deviceModel-3520230737": "g305_ext1",
+	"deviceModel-2584601219": "pro_x_60",
+	"backendConnectionEventSentToday": {
+		"date": "7-8",
+		"count": 0
+	},
+	"primaryDisplaySizeKey": {
+		"scaleFactor": 1,
+		"width": 1920,
+		"height": 1080
+	},
+	"activeDisplaySizeKey": {
+		"activeDisplayId": 2347132681,
+		"scaleFactor": 1,
+		"width": 1920,
+		"height": 1080
+	}
+}

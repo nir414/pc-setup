@@ -113,20 +113,51 @@ func (e *Engine) collectFolder(ctx context.Context, section sectionSpec, folder 
 }
 
 // collectSystemSnapshot: 현재 시스템 파일 상태를 스냅샷으로 생성
-// 다음 백업 시 변경사항 추적에 사용됩니다.
+// SyncData 템플릿에 정의된 파일만 추적합니다.
 func (e *Engine) collectSystemSnapshot(ctx context.Context) (*state.Snapshot, error) {
-	files, err := e.collectSystemFiles(ctx)
+	// 템플릿 파일 목록 수집
+	templateFiles, err := e.collectTemplateFiles(ctx)
 	if err != nil {
 		return nil, err
 	}
+
 	snapshot := state.NewSnapshot()
-	for key, info := range files {
+
+	// 템플릿에 있는 각 파일에 대해 시스템 파일 상태 확인
+	for key := range templateFiles {
+		// 템플릿 경로를 시스템 경로로 변환
+		systemPath, _, ok := e.resolvePaths(key)
+		if !ok {
+			continue
+		}
+
+		// 시스템 파일 존재 확인
+		info, err := os.Stat(systemPath)
+		if err != nil {
+			if os.IsNotExist(err) {
+				// 파일이 없으면 스냅샷에 포함하지 않음
+				continue
+			}
+			return nil, err
+		}
+
+		if info.IsDir() {
+			continue
+		}
+
+		// 해시 계산
+		hash, err := hashFile(systemPath)
+		if err != nil {
+			return nil, err
+		}
+
 		snapshot.Files[key] = state.FileRecord{
-			Hash:    info.Hash,
-			Size:    info.Size,
-			ModTime: info.ModTime,
+			Hash:    hash,
+			Size:    info.Size(),
+			ModTime: info.ModTime().UTC(),
 		}
 	}
+
 	snapshot.GeneratedAt = time.Now().UTC()
 	return snapshot, nil
 }
