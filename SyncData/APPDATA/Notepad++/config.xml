@@ -6,41 +6,41 @@
         <Path name="C:\Users\&#xACFD;&#xB3C4;&#xC724;\Documents\PROGRAMMING\Programming\HighseraExDevEq\C\HYCERA_C Module &#xAC1C;&#xBC1C;\projects\HYCERA_C" />
         <Path name="C:\Users\&#xACFD;&#xB3C4;&#xC724;\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC5C5;&#xBB34; &#xAE30;&#xB85D;\2025" />
         <Filter name="*.*" />
-        <Find name="speed" />
-        <Find name="lse" />
-        <Find name="encoder type" />
-        <Find name="2700" />
-        <Find name="((?:[ \t]*&apos;[^\r\n]*\r?\n)+)?[\s]*?(Module \w+[\s\S]*?End Module)&#x000D;&#x000A;" />
-        <Find name="((?:&apos;[^\n]*\n)+)?[\s]*?(Module \w+[\s\S]*?End Module)" />
-        <Find name="((?:&apos;[^\n]*\n)+)?[\s]*(Module \w+[\s\S]*End Module)" />
-        <Find name="((?:&apos;[^\n]*\n)+)?(Module \w+[\s\S]*?End Module)" />
-        <Find name="((?:&apos;[^\n]*\n)+)" />
-        <Find name="((?:&apos;[^\n]*\n)*)" />
+        <Find name="10330" />
+        <Find name="&#x000D;&#x000A;" />
+        <Find name="DI:\s*(2300|10300|10331|10332|10333|10334|10335|10336|10337|10338|10611|10656|10657|10775)" />
+        <Find name="error" />
+        <Find name="0" />
+        <Find name="DI:\s*(2300|10300|10331|10332|10333|10334|10335|10336|10337|10611|10656|10657|10775)" />
+        <Find name="Dual" />
+        <Find name="Arm" />
+        <Find name="name" />
+        <Find name="WHIS" />
+        <Replace name="|" />
+        <Replace name=", " />
+        <Replace name="&#x000D;" />
+        <Replace name="Robot And Design" />
+        <Replace name="&#xADFC;&#xB85C;&#xC790;" />
         <Replace name="\n" />
         <Replace name=": " />
         <Replace name=":\n" />
         <Replace name="\t" />
         <Replace name="GRDY|8" />
-        <Replace name="GRDY|7" />
-        <Replace name="GRDY|6" />
-        <Replace name="GRDY|5" />
-        <Replace name="GRDY|3" />
-        <Replace name="GRDY|2" />
     </FindHistory>
-    <FileBrowser latestSelectedItem="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xD504;&#xB85C;&#xADF8;&#xB7A8;\SubnetSyncer\SSbackup\backup-250911(163243) 0699 WISFAC\config\robot01.pac">
-        <root foldername="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xD504;&#xB85C;&#xADF8;&#xB7A8;\SubnetSyncer\SSbackup\backup-250911(163243) 0699 WISFAC\config" />
+    <FileBrowser latestSelectedItem="\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\2024&#xB144;\S241288 ATI ASPEN D_WTR Home(51&#x00B0;)\S241288 ATI ASPEN(1) D_WTR Home(51&#x00B0;)\backup-250417(165632)\config\robot01.pac">
+        <root foldername="\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\2024&#xB144;\S241288 ATI ASPEN D_WTR Home(51&#x00B0;)\S241288 ATI ASPEN(1) D_WTR Home(51&#x00B0;)\backup-250417(165632)" />
     </FileBrowser>
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\LOG\Inspec\backupFile\LSE\SIF&amp;SIN\WTR1\projects\MergeCode\MergeCode.gpp" />
-        <File filename="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC7A5;&#xBE44; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xAD00;&#xB9AC;\GPL &#xBC84;&#xC804; &#xAD00;&#xB9AC;\1.1.35_MJ\MergeCode.gpp" />
-        <File filename="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xD504;&#xB85C;&#xADF8;&#xB7A8;\SubnetSyncer\SSbackup\backup-251211(173257) S250727 SIF #49 INDEX\projects\MergeCode\MergeCode.gpp" />
-        <File filename="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC7A5;&#xBE44; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xAD00;&#xB9AC;\GPL &#xBC84;&#xC804; &#xAD00;&#xB9AC;\WCP 1.1.35_MJ\MergeCode.gpp" />
-        <File filename="\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\LOG\Inspec\update_log.ver" />
-        <File filename="C:\Users\Doyun\Desktop\backupFile\KCTECH CMP SCARA G6K\systemInfo.txt" />
-        <File filename="C:\Users\Doyun\Documents\PROGRAMMING\Programming\python\PACManager\tests\robot01.pac" />
-        <File filename="C:\Users\Doyun\Desktop\LSE &#xD604;&#xC7A5; &#xBC31;&#xC5C5;\LSE &#xD2F0;&#xCE6D; &#xD3EC;&#xC778;&#xD2B8; &#xD604;&#xC7A5; &#xBC31;&#xC5C5; &#xAC00;&#xACF5; &#xBC84;&#xC804;\SI\INDEX\data\point.dat" />
-        <File filename="C:\Users\Doyun\Desktop\LSE &#xD604;&#xC7A5; &#xBC31;&#xC5C5;\SC034\20250430 (&#xC548;&#xC131; SETUP)\INDEX\flash\data\point.dat" />
-        <File filename="C:\Users\Doyun\Desktop\backupFile\LSE\SIF&amp;SIN\LSE SIF&amp;SIN INDEX\backup-251211(173257) S250727 SIF #49 INDEX\data\system.dat" />
+        <File filename="\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\2025&#xB144;\S250002 KCTECH - STA #32 (WET_Single)\INDEX\backup-250520(170850)\systemInfo.txt" />
+        <File filename="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xD504;&#xB85C;&#xADF8;&#xB7A8;\SubnetSyncer\SSbackup\backup-260204(111930) S251251 WITHTEC\config\robot01.pac" />
+        <File filename="C:\Users\Doyun\Downloads\ChatAi &#xB2E8;&#xCD95;&#xC5B4;.txt" />
+        <File filename="C:\Users\Doyun\Documents\GitHub\RND &#xB85C;&#xBD07;\K3000 WTR\data\pdbLIST.dat" />
+        <File filename="C:\Program Files (x86)\Precise Automation\Guidance Development Suite 4.0\GDE\projects\Mergecode\Project.gpr" />
+        <File filename="C:\Users\Doyun\Documents\&#xCE74;&#xCE74;&#xC624;&#xD1A1; &#xBC1B;&#xC740; &#xD30C;&#xC77C;\__init__IOConfig__ (10).gpl" />
+        <File filename="C:\Users\Doyun\Documents\&#xCE74;&#xCE74;&#xC624;&#xD1A1; &#xBC1B;&#xC740; &#xD30C;&#xC77C;\Macro.gpl" />
+        <File filename="C:\Users\Doyun\Desktop\S_Robot Data.code-workspace" />
+        <File filename="C:\Users\Doyun\Downloads\4&#xCC28; &#xB85C;&#xBD07; &#xD558;&#xB4DC;&#xC6E8;&#xC5B4; &#xD2B9;&#xC131;&#xBD84;&#xC11D;.txt" />
+        <File filename="C:\Users\Doyun\Documents\&#xC81C;&#xC5B4;&#xAE30; &#xAD00;&#xB9AC;\&#xD38C;&#xC6E8;&#xC5B4;\S251250 WITHTECH S_WTR 2P Track &#xD38C;&#xC6E8;&#xC5B4; &#xC14B;&#xC5C5;\S250294 SEMI_DARIN EFEM 2P #2 S_WTR\projects\Mergecode\__init__RobotConfig__.gpl" />
     </History>
     <ProjectPanels>
         <ProjectPanel id="0" workSpaceFile="" />
@@ -54,12 +54,12 @@
     <GUIConfigs>
         <GUIConfig name="ToolBar" visible="yes" fluentColor="8" fluentCustomColor="9152256" fluentMono="no">small</GUIConfig>
         <GUIConfig name="StatusBar">show</GUIConfig>
-        <GUIConfig name="TabBar" dragAndDrop="yes" drawTopBar="yes" drawInactiveTab="yes" reduce="yes" closeButton="no" pinButton="yes" showOnlyPinnedButton="no" buttonsOninactiveTabs="no" doubleClick2Close="yes" vertical="no" multiLine="yes" hide="no" quitOnEmpty="yes" iconSetNumber="0" />
+        <GUIConfig name="TabBar" dragAndDrop="yes" drawTopBar="yes" drawInactiveTab="yes" reduce="yes" closeButton="no" pinButton="yes" showOnlyPinnedButton="no" buttonsOninactiveTabs="no" doubleClick2Close="yes" vertical="no" multiLine="yes" hide="no" quitOnEmpty="yes" iconSetNumber="0" tabCompactLabelLen="0" />
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="no" size="2" backspaceUnindent="no" />
-        <GUIConfig name="AppPosition" x="458" y="90" width="1163" height="764" isMaximized="no" />
-        <GUIConfig name="FindWindowPosition" left="990" top="472" right="1729" bottom="916" isLessModeOn="no" />
+        <GUIConfig name="AppPosition" x="-9" y="265" width="1163" height="764" isMaximized="no" />
+        <GUIConfig name="FindWindowPosition" left="24" top="554" right="763" bottom="998" isLessModeOn="no" />
         <GUIConfig name="FinderConfig" wrappedLines="no" purgeBeforeEverySearch="no" showOnlyOneEntryPerFoundLine="yes" />
         <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20251008" autoUpdateMode="0">yes</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
@@ -99,7 +99,7 @@
         <GUIConfig name="MarkAll" matchCase="no" wholeWordOnly="yes" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="DarkMode" enable="yes" colorTone="0" customColorTop="2105376" customColorMenuHotTrack="4210752" customColorActive="4210752" customColorMain="2105376" customColorError="176" customColorText="14737632" customColorDarkText="12632256" customColorDisabledText="8421504" customColorLinkText="65535" customColorEdge="6579300" customColorHotEdge="10197915" customColorDisabledEdge="4737096" enableWindowsMode="yes" darkThemeName="DarkModeDefault.xml" darkToolBarIconSet="0" darkTbFluentColor="8" darkTbFluentCustomColor="9152256" darkTbFluentMono="no" darkTabIconSet="2" darkTabUseTheme="no" lightThemeName="" lightToolBarIconSet="4" lightTbFluentColor="0" lightTbFluentCustomColor="14696463" lightTbFluentMono="no" lightTabIconSet="0" lightTabUseTheme="yes" />
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" lineNumberDynamicWidth="yes" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="circle" isChangeHistoryEnabled="1" lineWrapMethod="aligned" currentLineIndicator="1" currentLineFrameWidth="1" virtualSpace="no" scrollBeyondLastLine="yes" rightClickKeepsSelection="no" selectedTextForegroundSingleColor="yes" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="1" zoom2="0" whiteSpaceShow="show" eolShow="hide" eolMode="1" npcShow="show" npcMode="1" npcCustomColor="no" npcIncludeCcUniEOL="no" npcNoInputC0="yes" ccShow="yes" borderWidth="2" smoothFont="no" paddingLeft="0" paddingRight="0" distractionFreeDivPart="4" lineCopyCutWithoutSelection="yes" multiSelection="yes" columnSel2MultiEdit="yes" />
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" lineNumberDynamicWidth="yes" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="circle" isChangeHistoryEnabled="1" lineWrapMethod="aligned" currentLineIndicator="1" currentLineFrameWidth="1" virtualSpace="no" scrollBeyondLastLine="yes" rightClickKeepsSelection="no" selectedTextForegroundSingleColor="yes" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="2" zoom2="0" whiteSpaceShow="show" eolShow="hide" eolMode="1" npcShow="show" npcMode="1" npcCustomColor="no" npcIncludeCcUniEOL="no" npcNoInputC0="yes" ccShow="yes" borderWidth="2" smoothFont="no" paddingLeft="0" paddingRight="0" distractionFreeDivPart="4" lineCopyCutWithoutSelection="yes" multiSelection="yes" columnSel2MultiEdit="yes" />
         <GUIConfig name="DockingManager" leftWidth="120" rightWidth="495" topHeight="200" bottomHeight="200">
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44080" curr="0" prev="-1" isVisible="yes" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="1" prev="-1" isVisible="yes" />
