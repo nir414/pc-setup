@@ -2,15 +2,34 @@
 
 Windows PC 설정 파일을 자동으로 백업하는 도구입니다.
 
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/nir414/pc-setup/releases)
+
 ## 현재 구성
 
+- `syncer.exe` : 실행 파일 (Windows 전용)
 - `SyncData/` : 백업된 설정 파일들
 - `sync.toml` : 백업 대상 폴더 및 제외 규칙 정의
 - `syncer/` : 백업 도구 소스 코드 (Go)
 
+## 빠른 시작
+
+릴리즈 페이지에서 `syncer.exe`를 다운로드하고 바로 사용하세요!
+
+```powershell
+# 버전 확인
+.\syncer.exe version
+
+# 도움말 보기
+.\syncer.exe help
+```
+
 ## 사용법
 
-### 1. 프로그램 빌드
+### 0. 실행 파일 다운로드 (권장)
+
+[릴리즈 페이지](https://github.com/nir414/pc-setup/releases)에서 최신 `syncer.exe`를 다운로드하세요.
+
+### 1. 프로그램 빌드 (선택사항)
 
 ```powershell
 cd syncer
@@ -19,6 +38,11 @@ cd ..
 ```
 
 ### 2. 명령어
+
+**버전 확인:**
+```powershell
+.\syncer.exe version
+```
 
 **백업 전 상태 확인:**
 ```powershell
