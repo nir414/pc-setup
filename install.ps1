@@ -1,7 +1,7 @@
 winget install --id=Google.Chrome --accept-package-agreements --accept-source-agreements
 winget install --id=Microsoft.PowerToys --accept-package-agreements --accept-source-agreements
 winget install --id=NGWIN.PicPick --accept-package-agreements --accept-source-agreements
-winget install --id=voidtools.Everything --accept-package-agreements --accept-source-agreements
+winget install -e --id voidtools.Everything.Alpha --accept-package-agreements --accept-source-agreements
 winget install --id=SpeedCrunch.SpeedCrunch --accept-package-agreements --accept-source-agreements
 
 winget install --id=hluk.CopyQ --accept-package-agreements --accept-source-agreements
