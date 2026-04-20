@@ -7,6 +7,7 @@ winget install --id=SpeedCrunch.SpeedCrunch --accept-package-agreements --accept
 winget install --id=hluk.CopyQ --accept-package-agreements --accept-source-agreements
 winget install --id=JAMSoftware.TreeSize.Free --accept-package-agreements --accept-source-agreements
 winget install --id=DeepL.DeepL --accept-package-agreements --accept-source-agreements
+winget install --id=AntibodySoftware.AntRenamer --accept-package-agreements --accept-source-agreements
 # winget install --id=NickeManarin.ScreenToGif --accept-package-agreements --accept-source-agreements
 # winget install --id=Hulubulu.AdvancedRenamer --accept-package-agreements --accept-source-agreements
 # winget install --id=TGRMNSoftware.BulkRenameUtility --accept-package-agreements --accept-source-agreements
@@ -18,7 +19,7 @@ winget install --id=Notepad++.Notepad++ --accept-package-agreements --accept-sou
 winget install --id=WinMerge.WinMerge --accept-package-agreements --accept-source-agreements
 
 winget install --id=Bandisoft.Bandizip --accept-package-agreements --accept-source-agreements
-winget install --id=Kakao.KakaoTalk --accept-package-agreements --accept-source-agreements
+winget install -e --id Kakao.KakaoTalk --accept-package-agreements --accept-source-agreements
 winget install --id=NAVER.MYBOX --accept-package-agreements --accept-source-agreements
 winget install --id=Discord.Discord --accept-package-agreements --accept-source-agreements
 

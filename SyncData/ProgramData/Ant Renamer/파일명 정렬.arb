@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AntRenamer Version="2.13.0" Date="2026-04-20">
+ <Batch>
+  <Regexp Expr="^\d+\)\s*" Repl=""/>
+  <Enum Mask="%num%) %name%%ext%" Start="1" Digits="2" Incr="1" Restart="1"/>
+ </Batch>
+</AntRenamer>

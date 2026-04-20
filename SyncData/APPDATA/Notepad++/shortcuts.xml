@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <NotepadPlus>
     <!--
     You can organize you Macro menu & Run menu by adding the attribute 'FolderName="My sub-menu name"' to any Macro or Command node.
@@ -127,8 +127,7 @@
         </Macro>
         <Macro name="파라미터 정렬" Ctrl="yes" Alt="no" Shift="yes" Key="79">
             <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
-            <Action type="3" message="1601" wParam="0" lParam="0" sParam=",
-     " />
+            <Action type="3" message="1601" wParam="0" lParam="0" sParam=",&#x0D;&#x0A;     " />
             <Action type="3" message="1625" wParam="0" lParam="1" sParam="" />
             <Action type="3" message="1602" wParam="0" lParam="0" sParam=", " />
             <Action type="3" message="1702" wParam="0" lParam="256" sParam="" />
@@ -156,6 +155,19 @@
         </Macro>
         <Macro name="모든 형식 해제" Ctrl="no" Alt="yes" Shift="no" Key="96">
             <Action type="2" message="0" wParam="43032" lParam="0" sParam="" />
+        </Macro>
+        <Macro name="게인 추출" Ctrl="yes" Alt="no" Shift="yes" Key="71">
+            <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
+            <Action type="3" message="1601" wParam="0" lParam="0" sParam=",&#x0A;     " />
+            <Action type="3" message="1625" wParam="0" lParam="0" sParam="" />
+            <Action type="3" message="1602" wParam="0" lParam="0" sParam=", " />
+            <Action type="3" message="1702" wParam="0" lParam="768" sParam="" />
+            <Action type="3" message="1701" wParam="0" lParam="1609" sParam="" />
+            <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
+            <Action type="3" message="1601" wParam="0" lParam="0" sParam="DI:\s*(2300|10300|10331|10332|10333|10334|10335|10336|10337|10338|10610|10611|10656|10657|10775)" />
+            <Action type="3" message="1625" wParam="0" lParam="2" sParam="" />
+            <Action type="3" message="1702" wParam="0" lParam="0" sParam="" />
+            <Action type="3" message="1701" wParam="0" lParam="1641" sParam="" />
         </Macro>
     </Macros>
     <UserDefinedCommands>
