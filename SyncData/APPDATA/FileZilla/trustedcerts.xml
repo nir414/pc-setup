@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<FileZilla3 version="3.69.5" platform="windows">
+<FileZilla3 version="3.69.6" platform="windows">
 	<InsecureHosts>
 		<Host Port="21">192.168.0.1</Host>
 		<Host Port="21">192.168.0.4</Host>
@@ -17,6 +17,11 @@
 		<Host Port="21">192.168.0.161</Host>
 		<Host Port="21">192.168.0.10</Host>
 		<Host Port="21">192.168.200.4</Host>
+		<Host Port="21">192.168.0.104</Host>
+		<Host Port="21">192.168.0.103</Host>
+		<Host Port="21">192.168.0.101</Host>
+		<Host Port="21">192.168.0.102</Host>
+		<Host Port="21">192.168.0.100</Host>
 	</InsecureHosts>
 	<FtpSessionResumption>
 		<Entry Host="192.168.0.25" Port="21">true</Entry>

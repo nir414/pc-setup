@@ -26,8 +26,8 @@ Windows PC 포맷/신규 셋업 시 앱 설치와 설정 동기화를 빠르게 
 # SyncData -> PC 복원 (확인 prompt)
 .\scripts\sync.ps1 -Mode Restore
 
-# 단일 앱만
-.\scripts\sync.ps1 -Mode Backup -App Notepad++
+# 단일 폴더만
+.\scripts\sync.ps1 -Mode Backup -Folder Notepad++
 
 # 저장소 외 위치 사용
 .\scripts\sync.ps1 -Mode Backup -BackupRoot D:\Backup

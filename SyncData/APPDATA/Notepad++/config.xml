@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <NotepadPlus>
-    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="no" fifRecuisive="yes" fifInHiddenFolder="no" fifProjectPanel1="no" fifProjectPanel2="no" fifProjectPanel3="no" fifFilterFollowsDoc="no" searchMode="2" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no" regexBackward4PowerUser="no" bookmarkLine="no" purge="no">
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" fifProjectPanel1="no" fifProjectPanel2="no" fifProjectPanel3="no" fifFilterFollowsDoc="no" searchMode="0" transparencyMode="1" transparency="150" dotMatchesNewline="no" isSearch2ButtonsMode="no" regexBackward4PowerUser="no" bookmarkLine="no" purge="no">
+        <Path name="C:\SVN\setup\S_Robot_Data\KCTECH\CMP G6K\KCTECH CMP INDEX\config" />
         <Path name="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC5C5;&#xBB34; &#xAE30;&#xB85D;" />
         <Path name="C:\Users\&#xACFD;&#xB3C4;&#xC724;\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC5C5;&#xBB34; &#xAE30;&#xB85D;" />
         <Path name="C:\Users\&#xACFD;&#xB3C4;&#xC724;\Documents\PROGRAMMING\Programming\HighseraExDevEq\C\HYCERA_C Module &#xAC1C;&#xBC1C;\projects\HYCERA_C" />
         <Path name="C:\Users\&#xACFD;&#xB3C4;&#xC724;\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\&#xC5C5;&#xBB34; &#xAE30;&#xB85D;\2025" />
         <Filter name="*.*" />
-        <Find name="class vac" />
-        <Find name="20064" />
-        <Find name="20063" />
-        <Find name="maxStageCount" />
-        <Find name="2300" />
-        <Find name="2026" />
-        <Find name="&#x0009;" />
-        <Find name="120300" />
-        <Find name="12300" />
-        <Find name="SetupAndMacroModule" />
+        <Find name='&quot;macro&quot;' />
+        <Find name='&quot;P2P&quot;' />
+        <Find name="pd0001" />
+        <Find name="pd001" />
+        <Find name="001" />
+        <Find name="time" />
+        <Find name="encoder type" />
+        <Find name="inrange " />
+        <Find name="Ignore" />
+        <Find name="2601" />
         <Replace name=", " />
         <Replace name="|" />
+        <Replace name="," />
         <Replace name="&#x000D;" />
         <Replace name="Robot And Design" />
         <Replace name="&#xADFC;&#xB85C;&#xC790;" />
@@ -25,12 +27,19 @@
         <Replace name=": " />
         <Replace name=":\n" />
         <Replace name="\t" />
-        <Replace name="GRDY|8" />
     </FindHistory>
-    <FileBrowser latestSelectedItem="\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\2024&#xB144;\S241288 ATI ASPEN D_WTR Home(51&#x00B0;)\S241288 ATI ASPEN(1) D_WTR Home(51&#x00B0;)\backup-250417(165632)\config\robot01.pac">
-        <root foldername="\\192.168.0.25\B0000_Department\BD000_Soft_Control\BD600-&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC790;&#xB8CC;\2024&#xB144;\S241288 ATI ASPEN D_WTR Home(51&#x00B0;)\S241288 ATI ASPEN(1) D_WTR Home(51&#x00B0;)\backup-250417(165632)" />
-    </FileBrowser>
+    <FileBrowser />
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
+        <File filename="C:\Users\Doyun\Documents\&#xC81C;&#xC5B4;&#xAE30; &#xAD00;&#xB9AC;\&#xD38C;&#xC6E8;&#xC5B4;\S260174 ATI D_WTR WIND2_B(47) Track &#xD38C;&#xC6E8;&#xC5B4; &#xC14B;&#xC5C5;\projects\MergeCode\MergeCode.gpp" />
+        <File filename="C:\Users\Doyun\Documents\&#xC81C;&#xC5B4;&#xAE30; &#xAD00;&#xB9AC;\&#xD38C;&#xC6E8;&#xC5B4;\S260217 NEXUSONE D_WTR Track &#xD38C;&#xC6E8;&#xC5B4; &#xC14B;&#xC5C5;\systemInfo.txt" />
+        <File filename="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\06) &#xD504;&#xB85C;&#xADF8;&#xB7A8;\SubnetSyncer\SSbackup\backup-260514(095424) &#xC62C;&#xB9AC;&#xACE0;\data\point1.dat" />
+        <File filename="C:\Users\Doyun\AppData\Local\Temp\fz3temp-2\point1.dat" />
+        <File filename="D:\(&#xC81C;&#xC5B4;)&#xC5D0;&#xC774;&#xC9D5;PC&#xC14B;&#xC5C5;\EFEMTest_v1.00.035\System\TestRobt.ini" />
+        <File filename="C:\Users\Doyun\AppData\Local\Temp\fz3temp-2\MergeCode.gpl" />
+        <File filename="C:\Users\Doyun\AppData\Local\Temp\fz3temp-2\system.dat" />
+        <File filename="C:\Users\Doyun\AppData\Local\Temp\fz3temp-2\__init__IOConfig__.gpl" />
+        <File filename="C:\Users\Doyun\AppData\Local\Temp\fz3temp-2\__init__RobotConfig__.gpl" />
+        <File filename="D:\(&#xC81C;&#xC5B4;)&#xC5D0;&#xC774;&#xC9D5;PC&#xC14B;&#xC5C5;\EFEMTest_v1.00.035\System\Sequence\TestRobot.sequence.ini" />
     </History>
     <ProjectPanels>
         <ProjectPanel id="0" workSpaceFile="" />
@@ -48,8 +57,8 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="no" size="2" backspaceUnindent="no" />
-        <GUIConfig name="AppPosition" x="-1228" y="0" width="1237" height="1029" isMaximized="no" />
-        <GUIConfig name="FindWindowPosition" left="1172" top="541" right="1911" bottom="985" isLessModeOn="no" />
+        <GUIConfig name="AppPosition" x="358" y="47" width="1593" height="1028" isMaximized="yes" />
+        <GUIConfig name="FindWindowPosition" left="591" top="289" right="1328" bottom="731" isLessModeOn="no" />
         <GUIConfig name="FinderConfig" wrappedLines="no" purgeBeforeEverySearch="no" showOnlyOneEntryPerFoundLine="yes" />
         <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20251008" autoUpdateMode="0">yes</GUIConfig>
         <GUIConfig name="Auto-detection">yes</GUIConfig>
@@ -89,17 +98,17 @@
         <GUIConfig name="MarkAll" matchCase="no" wholeWordOnly="yes" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="DarkMode" enable="yes" colorTone="0" customColorTop="2105376" customColorMenuHotTrack="4210752" customColorActive="4210752" customColorMain="2105376" customColorError="176" customColorText="14737632" customColorDarkText="12632256" customColorDisabledText="8421504" customColorLinkText="65535" customColorEdge="6579300" customColorHotEdge="10197915" customColorDisabledEdge="4737096" enableWindowsMode="yes" darkThemeName="DarkModeDefault.xml" darkToolBarIconSet="0" darkTbFluentColor="8" darkTbFluentCustomColor="9152256" darkTbFluentMono="no" darkTabIconSet="2" darkTabUseTheme="no" lightThemeName="" lightToolBarIconSet="4" lightTbFluentColor="0" lightTbFluentCustomColor="14696463" lightTbFluentMono="no" lightTabIconSet="0" lightTabUseTheme="yes" />
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" lineNumberDynamicWidth="yes" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="circle" isChangeHistoryEnabled="1" lineWrapMethod="aligned" currentLineIndicator="1" currentLineFrameWidth="1" virtualSpace="no" scrollBeyondLastLine="yes" rightClickKeepsSelection="no" selectedTextForegroundSingleColor="yes" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="1" zoom2="0" whiteSpaceShow="show" eolShow="hide" eolMode="1" npcShow="show" npcMode="1" npcCustomColor="no" npcIncludeCcUniEOL="no" npcNoInputC0="yes" ccShow="yes" borderWidth="2" smoothFont="no" paddingLeft="0" paddingRight="0" distractionFreeDivPart="4" lineCopyCutWithoutSelection="yes" multiSelection="yes" columnSel2MultiEdit="yes" />
-        <GUIConfig name="DockingManager" leftWidth="120" rightWidth="495" topHeight="200" bottomHeight="200">
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" lineNumberDynamicWidth="yes" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="circle" isChangeHistoryEnabled="1" lineWrapMethod="aligned" currentLineIndicator="1" currentLineFrameWidth="1" virtualSpace="no" scrollBeyondLastLine="yes" rightClickKeepsSelection="no" selectedTextForegroundSingleColor="yes" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="2" zoom2="0" whiteSpaceShow="show" eolShow="hide" eolMode="1" npcShow="show" npcMode="1" npcCustomColor="no" npcIncludeCcUniEOL="no" npcNoInputC0="yes" ccShow="yes" borderWidth="2" smoothFont="no" paddingLeft="0" paddingRight="0" distractionFreeDivPart="4" lineCopyCutWithoutSelection="yes" multiSelection="yes" columnSel2MultiEdit="yes" />
+        <GUIConfig name="DockingManager" leftWidth="115" rightWidth="495" topHeight="200" bottomHeight="200">
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44080" curr="0" prev="-1" isVisible="yes" />
-            <PluginDlg pluginName="ComparePlus.dll" id="31" curr="0" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="1" prev="-1" isVisible="yes" />
-            <PluginDlg pluginName="NppMarkdownPanel" id="0" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="no" />
+            <PluginDlg pluginName="ComparePlus.dll" id="31" curr="0" prev="-1" isVisible="no" />
+            <PluginDlg pluginName="NppMarkdownPanel" id="0" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="MarkdownViewer++" id="0" curr="1" prev="-1" isVisible="no" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44084" curr="1" prev="-1" isVisible="no" />
             <ActiveTabs cont="0" activeTab="0" />
-            <ActiveTabs cont="1" activeTab="0" />
+            <ActiveTabs cont="1" activeTab="-1" />
             <ActiveTabs cont="2" activeTab="-1" />
             <ActiveTabs cont="3" activeTab="-1" />
         </GUIConfig>

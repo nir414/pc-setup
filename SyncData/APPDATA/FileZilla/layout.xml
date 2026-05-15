@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
-<FileZilla3 version="3.69.5" platform="windows">
-	<Layout Builddate="2025-11-12" Buildtime="13:59:13">
+<FileZilla3 version="3.69.6" platform="windows">
+	<Layout Builddate="2026-02-12" Buildtime="15:20:47">
 		<Resources />
-		<Language id="ko_KR" date="1762956010">
+		<Language id="ko_KR" date="1770909702">
 			<Font font="1;9;-15;0;0;0;400;0;0;0;1;0;0;0;0;맑은 고딕" width="874" height="20" />
+			<Dialog name="Settings" width="577" />
 		</Language>
 	</Layout>
 </FileZilla3>

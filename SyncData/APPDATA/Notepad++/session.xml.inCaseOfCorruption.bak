@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="0">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="10" startPos="1" endPos="1" selMode="0" offset="0" wrapCount="1" lang="&#xC5C6;&#xC74C; (&#xC77C;&#xBC18; &#xD14D;&#xC2A4;&#xD2B8;)" encoding="-1" userReadOnly="no" filename="&#xC0C8;&#xB85C;&#xC6B4; 1" backupFilePath="C:\Users\Doyun\AppData\Roaming\Notepad++\backup\&#xC0C8;&#xB85C;&#xC6B4; 1@2026-05-15_093340" originalFileLastModifTimestamp="0" originalFileLastModifTimestampHigh="0" tabColourId="-1" RTL="no" tabPinned="no" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="512" mapWrapIndentMode="-1" mapIsWrap="no" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

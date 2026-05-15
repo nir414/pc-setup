@@ -1,32 +1,46 @@
 @{
-	# 동기화 대상 앱 목록.
-	# Base   : APPDATA | LOCALAPPDATA | USERPROFILE
-	# Path   : Base 아래 상대 경로 (앱 설정 폴더)
-	# ExcludeDirs : robocopy /XD 로 전달될 폴더 이름 (단순 이름 또는 와일드카드)
-	# ExcludeFiles: robocopy /XF 로 전달될 파일 이름/와일드카드
-	Apps = @(
-		@{ Name = 'CopyQ';      Base = 'APPDATA'; Path = 'CopyQ';
-			ExcludeDirs = @('cache'); ExcludeFiles = @('*.log') },
+    # 글로벌 제외 규칙 — 모든 폴더에 적용.
+    # 확장자 패턴('*.log' 등)·명시적 파일명은 robocopy /XF, 그 외 폴더 이름은 /XD 로 분기.
+    GlobalExcludes = @(
+        'cache',
+        '*.log',
+        '*.backup.csv',
+        '*.backup.ini',
+        '*.backup.json',
+        '*.tmp'
+    )
 
-		@{ Name = 'Everything'; Base = 'APPDATA'; Path = 'Everything';
-			ExcludeDirs = @('cache'); ExcludeFiles = @('*.log') },
+    Sections = @{
+        APPDATA = @{
+            Folders = @(
+                @{ Path = 'CopyQ' }
+                @{ Path = 'DeepL_SE' }
+                @{ Path = 'Everything'; Excludes = @(
+                    'Search History-1.5a.csv',
+                    'Run History-1.5a.csv'
+                )}
+                @{ Path = 'FileZilla' }
+                @{ Path = 'lghub' }
+                @{ Path = 'Notepad++'; Excludes = @('backup') }
+                @{ Path = 'PicPick' }
+                @{ Path = 'WinMerge'; Excludes = @('Backup') }
+            )
+        }
 
-		@{ Name = 'FileZilla';  Base = 'APPDATA'; Path = 'FileZilla';
-			ExcludeDirs = @('cache'); ExcludeFiles = @('*.log') },
+        LOCALAPPDATA = @{
+            Folders = @()
+        }
 
-		@{ Name = 'lghub';      Base = 'APPDATA'; Path = 'lghub';
-			ExcludeDirs = @('cache'); ExcludeFiles = @('*.log') },
+        USERPROFILE = @{
+            Folders = @(
+                @{ Path = 'Documents\PowerToys' }
+            )
+        }
 
-		@{ Name = 'Notepad++';  Base = 'APPDATA'; Path = 'Notepad++';
-			ExcludeDirs = @('backup','cache'); ExcludeFiles = @('*.log') },
-
-		@{ Name = 'PicPick';    Base = 'APPDATA'; Path = 'PicPick';
-			ExcludeDirs = @('cache'); ExcludeFiles = @('*.log') },
-
-		@{ Name = 'WinMerge';   Base = 'APPDATA'; Path = 'WinMerge';
-			ExcludeDirs = @('Backup','cache'); ExcludeFiles = @('*.log') },
-
-		@{ Name = 'PowerToys';  Base = 'USERPROFILE'; Path = 'Documents\PowerToys';
-			ExcludeDirs = @(); ExcludeFiles = @() }
-	)
+        ProgramData = @{
+            Folders = @(
+                @{ Path = 'Ant Renamer' }
+            )
+        }
+    }
 }
