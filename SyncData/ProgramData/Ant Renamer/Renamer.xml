@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<AntRenamer Version="2.13.0" Date="2026-04-20">
+<AntRenamer Version="2.13.0" Date="2026-05-14">
  <LastValues>
   <MultstrRepl LastSet="^\d+\)\s*" IncludeExt="False" CaseSensitive="True">
    <Sets>
@@ -93,12 +93,12 @@
   <Exif Mask="%datetime%%ext%" Offset="0"/>
  </LastValues>
  <Forms>
-  <Main State="0" Width="730" Height="500" Left="403" Top="182" AlwaysOnTop="False" FilesSortOrder="True" FilesSortColumn="-1" ActionsListWidth="150" BatchListHeight="100" EnableBatch="True" EnableSample="True" LogFilterOk="True" LogFilterError="True" LogFilterNot="True">
+  <Main State="0" Width="730" Height="500" Left="353" Top="147" AlwaysOnTop="False" FilesSortOrder="True" FilesSortColumn="-1" ActionsListWidth="150" BatchListHeight="100" EnableBatch="True" EnableSample="True" LogFilterOk="True" LogFilterError="True" LogFilterNot="True">
    <Toolbars>
     <tbProgram Rev="2000" Visible="1" DockedTo="tbdMain" LastDock="tbdMain" DockRow="0" DockPos="163" FloatLeft="0" FloatTop="0" FloatRightX="0" DisplayMode="0"/>
     <tbTabs Rev="2000" Visible="1" DockedTo="tbdMain" LastDock="tbdMain" DockRow="0" DockPos="0" FloatLeft="0" FloatTop="0" FloatRightX="0" DisplayMode="0"/>
     <tbFiles Rev="2000" Visible="1" DockedTo="tbdMain" LastDock="tbdMain" DockRow="1" DockPos="0" FloatLeft="0" FloatTop="0" FloatRightX="0" DisplayMode="0"/>
-    <tbActions Rev="2000" Visible="0" DockedTo="tbdMain" LastDock="tbdMain" DockRow="1" DockPos="448" FloatLeft="0" FloatTop="0" FloatRightX="0" DisplayMode="0"/>
+    <tbActions Rev="2000" Visible="1" DockedTo="tbdMain" LastDock="tbdMain" DockRow="1" DockPos="448" FloatLeft="0" FloatTop="0" FloatRightX="0" DisplayMode="0"/>
     <tbLog Rev="2000" Visible="0" DockedTo="tbdMain" LastDock="tbdMain" DockRow="1" DockPos="3" FloatLeft="0" FloatTop="0" FloatRightX="0" DisplayMode="0"/>
     <tbMove Rev="2000" Visible="1" DockedTo="tbdMain" LastDock="tbdMain" DockRow="1" DockPos="346" FloatLeft="0" FloatTop="0" FloatRightX="0" DisplayMode="0"/>
    </Toolbars>
@@ -117,7 +117,7 @@
  </Forms>
  <Options Language="Korean.lng">
   <Display ToolbarIconSet="" FontName="Arial Unicode MS">
-   <DragDropOptions AddFiles="True" AddFolders="False" Recursive="True"/>
+   <DragDropOptions AddFiles="True" AddFolders="True" Recursive="False"/>
   </Display>
   <Processing/>
  </Options>

@@ -7,14 +7,20 @@
         '*.backup.csv',
         '*.backup.ini',
         '*.backup.json',
-        '*.tmp'
+        '*.tmp',
+        '*.lock',
+        '*.dat',
+        '*.dat.*',
+        '*.bak',
+        '*.swp',
+        '*.db'
     )
 
     Sections = @{
         APPDATA = @{
             Folders = @(
-                @{ Path = 'CopyQ' }
-                @{ Path = 'DeepL_SE' }
+                @{ Path = 'CopyQ'; Excludes = @('copyq', 'copyq_tabs.ini.*') }
+                @{ Path = 'DeepL_SE'; Excludes = @('logs', 'featureGates.db', 'featureUsageHistory.db', 'history.db', 'historyConsent.db') }
                 @{ Path = 'Everything'; Excludes = @(
                     'Search History-1.5a.csv',
                     'Run History-1.5a.csv'
@@ -33,7 +39,7 @@
 
         USERPROFILE = @{
             Folders = @(
-                @{ Path = 'Documents\PowerToys' }
+                @{ Path = 'Documents\PowerToys'; Excludes = @('Backup') }
             )
         }
 
