@@ -9,7 +9,7 @@
 
 ### 릴리즈 파일
 ✅ `syncer.exe` - Windows 실행 파일 (3.9MB, PE32+ executable)
-✅ `RELEASE_NOTES.md` - 릴리즈 노트
+✅ `docs\release\RELEASE_NOTES.md` - 릴리즈 노트
 ✅ `syncer/internal/version/version.go` - 버전 정보 모듈
 
 ### 추가된 기능
@@ -42,7 +42,7 @@ GitHub에서 릴리즈를 생성하려면 다음 단계를 수행하세요:
    - "Create a new release" 클릭
    - 태그: v1.0.0 선택
    - 제목: "v1.0.0 - First Stable Release"
-   - 설명: RELEASE_NOTES.md 내용 복사
+   - 설명: docs\release\RELEASE_NOTES.md 내용 복사
    - 파일 첨부: syncer.exe (3.9MB)
    - "Publish release" 클릭
 

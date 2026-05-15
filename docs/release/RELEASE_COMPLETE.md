@@ -17,8 +17,8 @@
    - 상태: ✅ 빌드 성공 및 테스트 완료
 
 3. **문서 작성**
-   - `RELEASE_NOTES.md` - 릴리즈 노트
-   - `RELEASE_CHECKLIST.md` - 릴리즈 진행 가이드
+   - `docs\release\RELEASE_NOTES.md` - 릴리즈 노트
+   - `docs\release\RELEASE_CHECKLIST.md` - 릴리즈 진행 가이드
    - `README.md` 업데이트 - 빠른 시작 가이드 추가
 
 4. **코드 품질 검증**
@@ -36,8 +36,8 @@
 ```
  .gitignore                         |   4 +++-
  README.md                          |  26 +++++++++++++++++++++++++-
- RELEASE_CHECKLIST.md               |  65 ++++++++++++++++++++++++++++++++++
- RELEASE_NOTES.md                   |  48 +++++++++++++++++++++++++++++
+ docs\release\RELEASE_CHECKLIST.md  |  65 ++++++++++++++++++++++++++++++++++
+ docs\release\RELEASE_NOTES.md      |  48 +++++++++++++++++++++++++++++
  syncer.exe                         | Bin 0 -> 4080640 bytes
  syncer/internal/app/app.go         |  19 ++++++++++++++-----
  syncer/internal/version/version.go |  13 +++++++++++++
@@ -71,7 +71,7 @@ git push origin v1.0.0
 1. https://github.com/nir414/pc-setup/releases/new 방문
 2. 태그: **v1.0.0** 선택
 3. 릴리즈 제목: **v1.0.0 - First Stable Release**
-4. 설명: `RELEASE_NOTES.md` 내용 복사
+4. 설명: `docs\release\RELEASE_NOTES.md` 내용 복사
 5. 파일 첨부: `syncer.exe` 업로드
 6. "Publish release" 클릭
 
@@ -97,8 +97,8 @@ syncer - Windows 설정 백업 도우미
 
 ### 📚 참고 문서
 
-- 릴리즈 노트: `RELEASE_NOTES.md`
-- 릴리즈 절차: `RELEASE_CHECKLIST.md`
+- 릴리즈 노트: `docs\release\RELEASE_NOTES.md`
+- 릴리즈 절차: `docs\release\RELEASE_CHECKLIST.md`
 - 사용 설명서: `README.md`
 
 ---
