@@ -30,8 +30,6 @@
     </FindHistory>
     <FileBrowser />
     <History nbMaxFile="10" inSubMenu="no" customLength="-1">
-        <File filename="C:\Users\Doyun\Documents\&#xC81C;&#xC5B4;&#xAE30; &#xAD00;&#xB9AC;\&#xD38C;&#xC6E8;&#xC5B4;\S260174 ATI D_WTR WIND2_B(47) Track &#xD38C;&#xC6E8;&#xC5B4; &#xC14B;&#xC5C5;\projects\MergeCode\MergeCode.gpp" />
-        <File filename="C:\Users\Doyun\Documents\&#xC81C;&#xC5B4;&#xAE30; &#xAD00;&#xB9AC;\&#xD38C;&#xC6E8;&#xC5B4;\S260217 NEXUSONE D_WTR Track &#xD38C;&#xC6E8;&#xC5B4; &#xC14B;&#xC5C5;\systemInfo.txt" />
         <File filename="C:\Users\Doyun\Documents\&#xC5C5;&#xBB34; &#xAD00;&#xB828;\06) &#xD504;&#xB85C;&#xADF8;&#xB7A8;\SubnetSyncer\SSbackup\backup-260514(095424) &#xC62C;&#xB9AC;&#xACE0;\data\point1.dat" />
         <File filename="C:\Users\Doyun\AppData\Local\Temp\fz3temp-2\point1.dat" />
         <File filename="D:\(&#xC81C;&#xC5B4;)&#xC5D0;&#xC774;&#xC9D5;PC&#xC14B;&#xC5C5;\EFEMTest_v1.00.035\System\TestRobt.ini" />
@@ -40,6 +38,8 @@
         <File filename="C:\Users\Doyun\AppData\Local\Temp\fz3temp-2\__init__IOConfig__.gpl" />
         <File filename="C:\Users\Doyun\AppData\Local\Temp\fz3temp-2\__init__RobotConfig__.gpl" />
         <File filename="D:\(&#xC81C;&#xC5B4;)&#xC5D0;&#xC774;&#xC9D5;PC&#xC14B;&#xC5C5;\EFEMTest_v1.00.035\System\Sequence\TestRobot.sequence.ini" />
+        <File filename="C:\Windows\System32\Tasks\PowerToys\Autorun for Doyun" />
+        <File filename="C:\Users\Doyun\Downloads\NTUwOTA0OTc3NTUwOTA0OQxF7zXW-3BZXa0GAWge79aKATuq_NcBJ5hjAJHaHOzFrwIt5fWIMrOXo0C7lXjEMYh0aV2eUilGJCOyq1VR5-o (2).ics" />
     </History>
     <ProjectPanels>
         <ProjectPanel id="0" workSpaceFile="" />
@@ -57,7 +57,7 @@
         <GUIConfig name="ScintillaViewsSplitter">vertical</GUIConfig>
         <GUIConfig name="UserDefineDlg" position="undocked">hide</GUIConfig>
         <GUIConfig name="TabSetting" replaceBySpace="no" size="2" backspaceUnindent="no" />
-        <GUIConfig name="AppPosition" x="358" y="47" width="1593" height="1028" isMaximized="yes" />
+        <GUIConfig name="AppPosition" x="-8" y="0" width="743" height="568" isMaximized="yes" />
         <GUIConfig name="FindWindowPosition" left="591" top="289" right="1328" bottom="731" isLessModeOn="no" />
         <GUIConfig name="FinderConfig" wrappedLines="no" purgeBeforeEverySearch="no" showOnlyOneEntryPerFoundLine="yes" />
         <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20251008" autoUpdateMode="0">yes</GUIConfig>
@@ -98,8 +98,8 @@
         <GUIConfig name="MarkAll" matchCase="no" wholeWordOnly="yes" />
         <GUIConfig name="SmartHighLight" matchCase="no" wholeWordOnly="yes" useFindSettings="no" onAnotherView="no">yes</GUIConfig>
         <GUIConfig name="DarkMode" enable="yes" colorTone="0" customColorTop="2105376" customColorMenuHotTrack="4210752" customColorActive="4210752" customColorMain="2105376" customColorError="176" customColorText="14737632" customColorDarkText="12632256" customColorDisabledText="8421504" customColorLinkText="65535" customColorEdge="6579300" customColorHotEdge="10197915" customColorDisabledEdge="4737096" enableWindowsMode="yes" darkThemeName="DarkModeDefault.xml" darkToolBarIconSet="0" darkTbFluentColor="8" darkTbFluentCustomColor="9152256" darkTbFluentMono="no" darkTabIconSet="2" darkTabUseTheme="no" lightThemeName="" lightToolBarIconSet="4" lightTbFluentColor="0" lightTbFluentCustomColor="14696463" lightTbFluentMono="no" lightTabIconSet="0" lightTabUseTheme="yes" />
-        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" lineNumberDynamicWidth="yes" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="circle" isChangeHistoryEnabled="1" lineWrapMethod="aligned" currentLineIndicator="1" currentLineFrameWidth="1" virtualSpace="no" scrollBeyondLastLine="yes" rightClickKeepsSelection="no" selectedTextForegroundSingleColor="yes" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="2" zoom2="0" whiteSpaceShow="show" eolShow="hide" eolMode="1" npcShow="show" npcMode="1" npcCustomColor="no" npcIncludeCcUniEOL="no" npcNoInputC0="yes" ccShow="yes" borderWidth="2" smoothFont="no" paddingLeft="0" paddingRight="0" distractionFreeDivPart="4" lineCopyCutWithoutSelection="yes" multiSelection="yes" columnSel2MultiEdit="yes" />
-        <GUIConfig name="DockingManager" leftWidth="115" rightWidth="495" topHeight="200" bottomHeight="200">
+        <GUIConfig name="ScintillaPrimaryView" lineNumberMargin="show" lineNumberDynamicWidth="yes" bookMarkMargin="show" indentGuideLine="show" folderMarkStyle="circle" isChangeHistoryEnabled="1" lineWrapMethod="aligned" currentLineIndicator="1" currentLineFrameWidth="1" virtualSpace="no" scrollBeyondLastLine="yes" rightClickKeepsSelection="no" selectedTextForegroundSingleColor="yes" disableAdvancedScrolling="no" wrapSymbolShow="hide" Wrap="yes" borderEdge="yes" isEdgeBgMode="no" edgeMultiColumnPos="" zoom="1" zoom2="0" whiteSpaceShow="show" eolShow="hide" eolMode="1" npcShow="show" npcMode="1" npcCustomColor="no" npcIncludeCcUniEOL="no" npcNoInputC0="yes" ccShow="yes" borderWidth="2" smoothFont="no" paddingLeft="0" paddingRight="0" distractionFreeDivPart="4" lineCopyCutWithoutSelection="yes" multiSelection="yes" columnSel2MultiEdit="yes" />
+        <GUIConfig name="DockingManager" leftWidth="103" rightWidth="495" topHeight="200" bottomHeight="200">
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44080" curr="0" prev="-1" isVisible="yes" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="0" curr="1" prev="-1" isVisible="yes" />
             <PluginDlg pluginName="Notepad++::InternalFunction" id="44085" curr="0" prev="-1" isVisible="no" />

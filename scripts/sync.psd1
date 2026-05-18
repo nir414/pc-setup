@@ -39,7 +39,7 @@
 
         USERPROFILE = @{
             Folders = @(
-                @{ Path = 'Documents\PowerToys'; Excludes = @('Backup') }
+                @{ Path = 'Documents\PowerToys' }
             )
         }
 
